@@ -1,0 +1,9 @@
+case $OSTYPE in
+	darwin*) # OS X
+		export SHELL_PLATFORM="osx"
+	;;
+	
+	*) # anything else
+		export SHELL_PLATFORM="linux"
+	;;
+esac

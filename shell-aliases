@@ -1,0 +1,6 @@
+# commands
+alias ls="pwd; ls --color"
+
+if [[ $SHELL_PLATFORM == "osx" ]]; then
+	alias ls="pwd; gls --color"
+fi
