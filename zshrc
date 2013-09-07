@@ -1,7 +1,7 @@
 # figure out what OS we're on
 source ~/.shell-detect
 
-HISTFILE=
+unset HISTFILE
 HISTSIZE=1000
 SAVEHIST=1000
 
