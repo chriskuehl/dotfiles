@@ -1,0 +1,13 @@
+GRAILS_VERSION=2.2.4
+GRAILS_PATH="$HOME/dev/grails-$GRAILS_VERSION/"
+
+if [[ -d "$GRAILS_PATH" ]]; then
+	GRAILS_HOME="$GRAILS_PATH"
+	export GRAILS_HOME
+	
+	PATH=$GRAILS_HOME/bin:$PATH
+	export PATH
+
+	JAVA_HOME=/usr/lib/jvm/default-java/
+	export JAVA_HOME
+fi

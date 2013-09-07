@@ -6,6 +6,7 @@ alias d19="ssh root@d19.me"
 
 # commands
 alias ls="ls --color"
+alias grep="grep --color=auto"
 
 if [[ $SHELL_PLATFORM == "osx" ]]; then
 	alias ls="gls --color"

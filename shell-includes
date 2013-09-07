@@ -1,2 +1,3 @@
 source ~/.shell-aliases
 source ~/.shell-exports
+source ~/.shell-conf
