@@ -11,3 +11,7 @@ alias grep="grep --color=auto"
 if [[ $SHELL_PLATFORM == "osx" ]]; then
 	alias ls="gls --color"
 fi
+
+if [[ $SHELL_PLATFORM == "solaris" ]]; then
+	alias ls="gls --color"
+fi
