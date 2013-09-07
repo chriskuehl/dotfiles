@@ -7,6 +7,12 @@ set nocompatible
 " and for plugins that are filetype specific.
 filetype indent plugin on
 
+" Disable arrow keys for navigation
+map <Left> <Nop>
+map <Right> <Nop>
+map <Up> <Nop>
+map <Down> <Nop>
+
 " Enable syntax highlighting
 syntax on
 
@@ -29,6 +35,9 @@ syntax on
 " try to quit without saving, and swap files will keep you safe if your computer
 " crashes.
 set hidden
+
+" Reload files changed outside vim
+set autoread
 
 " Note that not everyone likes working this way (with the hidden option).
 " Alternatives include using tabs or split windows instead of re-using the same
