@@ -1,3 +1,9 @@
+# common SSH
+alias mercury="ssh root@mercury.techxonline.net"
+alias nitrogen="ssh root@nitrogen.techxonline.net"
+alias 61a="ssh cs61a-aop@star.cs.berkeley.edu"
+alias d19="ssh root@d19.me"
+
 # commands
 alias ls="ls --color"
 
