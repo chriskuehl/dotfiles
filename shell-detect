@@ -1,8 +1,12 @@
 case $OSTYPE in
-	darwin*) # OS X
+	darwin*)
 		export SHELL_PLATFORM="osx"
 	;;
 	
+	solaris*)
+		export SHELL_PLATFORM="solaris"
+	;;
+
 	*) # anything else
 		export SHELL_PLATFORM="linux"
 	;;
