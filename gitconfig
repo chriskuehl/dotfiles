@@ -1,3 +1,5 @@
 [user]
 	name = Chris Kuehl
 	email = chris@techxonline.net
+[push]
+	default = simple
