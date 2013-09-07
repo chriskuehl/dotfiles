@@ -1,6 +1,6 @@
 # commands
-alias ls="pwd; ls --color"
+alias ls="ls --color"
 
 if [[ $SHELL_PLATFORM == "osx" ]]; then
-	alias ls="pwd; gls --color"
+	alias ls="gls --color"
 fi
