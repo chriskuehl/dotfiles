@@ -13,6 +13,11 @@ map <Right> <Nop>
 map <Up> <Nop>
 map <Down> <Nop>
 
+" Add mapping for inserting blank lines above/below
+" http://stackoverflow.com/questions/6765211/vim-command-to-insert-blank-line-in-normal-mode
+nnoremap <silent> [<space> :pu! _<cr>:']+1<cr>
+nnoremap <silent> ]<space> :pu _<cr>:'[-1<cr>
+
 " Enable syntax highlighting
 syntax on
 
