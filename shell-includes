@@ -1,3 +1,7 @@
 source ~/.shell-aliases
 source ~/.shell-exports
 source ~/.shell-conf
+
+if [[ -f ~/.shell-custom ]]; then
+	source ~/.shell-custom
+fi
