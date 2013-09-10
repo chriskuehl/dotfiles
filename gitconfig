@@ -2,7 +2,7 @@
 	name = Chris Kuehl
 	email = chris@techxonline.net
 [push]
-	default = simple
+	default = matching
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore
