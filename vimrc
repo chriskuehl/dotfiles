@@ -13,6 +13,10 @@ map <Right> <Nop>
 map <Up> <Nop>
 map <Down> <Nop>
 
+" Tab movement
+map <C-H> :execute "tabmove" tabpagenr() - 2 <CR>
+map <C-J> :execute "tabmove" tabpagenr() <CR>
+
 " Add mapping for inserting blank lines above/below
 " http://stackoverflow.com/questions/6765211/vim-command-to-insert-blank-line-in-normal-mode
 nnoremap <silent> [<space> :pu! _<cr>:']+1<cr>
