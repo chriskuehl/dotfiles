@@ -11,3 +11,9 @@ case $OSTYPE in
 		export SHELL_PLATFORM="linux"
 	;;
 esac
+
+case $TERM in
+	xterm-256color | xterm-color)
+		color_prompt=yes
+	;;
+esac
