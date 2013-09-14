@@ -7,6 +7,11 @@ set nocompatible
 " and for plugins that are filetype specific.
 filetype indent plugin on
 
+" Plugins
+execute pathogen#infect()
+
+map <C-n> :NERDTreeTabsToggle<CR>
+
 " Disable arrow keys for navigation
 map <Left> <Nop>
 map <Right> <Nop>
