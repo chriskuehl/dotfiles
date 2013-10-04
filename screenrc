@@ -1,0 +1,4 @@
+# use C-x instead of C-a for screen to avoid conflicting
+# with tmux, which uses C-a
+escape ^||
+bindkey "^[x" command
