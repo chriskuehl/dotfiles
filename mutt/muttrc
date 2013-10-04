@@ -1,0 +1,38 @@
+set realname="Chris Kuehl"
+
+set folder="~/Mail"
+set mask="!^\\.[^.]"
+set mbox="~/Mail"
+set record="+.Sent"
+set postponed="+.Drafts"
+set spoolfile="~/Mail"
+
+mailboxes `echo -n "+ "; find ~/Mail -maxdepth 1 -type d -name ".*" -printf "+'%f' "`
+macro index c "<change-folder>?<toggle-mailboxes>" "open a different folder"
+macro pager c "<change-folder>?<toggle-mailboxes>" "open a different folder"
+
+color normal    white default
+color attachment brightyellow default
+color hdrdefault cyan default
+color indicator default cyan
+color markers   brightred default
+color quoted    green default
+color signature cyan default
+color status    brightgreen blue
+color tilde     blue default
+color tree      red default
+color body     brightred default [\-\.+_a-zA-Z0-9]+@[\-\.a-zA-Z0-9]+
+color body     brightblue default (https?|ftp)://[\-\.\,/%~_:?\#a-zA-Z0-9]+
+
+color quoted1 brightyellow default
+color quoted2 red default
+color hdrdefault cyan default
+color header   brightred default ^Subject:
+color header   brightgreen default ^From:
+color signature cyan default
+
+color index green default ~p  # To me
+color index brightyellow default ~N  # New
+
+color index blue default ~T # Tagged
+color index red default ~D # Deleted
