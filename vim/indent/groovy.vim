@@ -49,15 +49,25 @@ function! GetGroovyIndent(lnum)
      return indent(plnum) - &sw
   endif
 
+  " When the line starts with a }, try aligning it with the matching {
+  if getline(v:lnum) =~ '^\s*}\s*\(//.*\|/\*.*\)\=$'
+    call cursor(v:lnum, 1)
+    silent normal %
+    let lnum = line('.')
+    if lnum < v:lnum
+      return indent(lnum)
+    endif
+  endif
+
   " If we have an open bracket, then we indent
   if getline(plnum) =~ '{[^{}]*$'
     return indent(plnum) + &sw
   endif
 
   " If we close a bracket, the we indent back
-  if getline(a:lnum) =~ '}[^{}]*$'
-    return indent(plnum) - &sw
-  endif
+"  if getline(a:lnum) =~ '}[^{}]*$'
+"    return indent(plnum) - &sw
+"  endif
 
 
   " If the previous line is inside parenthesis, use the indent of the starting
