@@ -1,6 +1,6 @@
 # common SSH
 alias mercury="ssh root@mercury.techxonline.net"
-alias 61a="ssh cs61a-aop@star.cs.berkeley.edu"
+alias 61a="TERM=xterm; ssh cs61a-aop@star.cs.berkeley.edu"
 alias d19="ssh root@d19.me"
 alias ocf="ssh ckuehl@ssh.ocf.berkeley.edu"
 alias mvm="ssh chris@chris-mvm.local"
