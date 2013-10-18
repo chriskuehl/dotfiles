@@ -153,3 +153,5 @@ map Y y$
 " next search
 nnoremap <C-L> :nohl<CR><C-L>
 
+nnoremap j gj
+nnoremap k gk
