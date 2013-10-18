@@ -5,7 +5,7 @@ unset HISTFILE
 HISTSIZE=1000
 SAVEHIST=1000
 
-setopt appendhistory extendedglob notify ignore_eof
+setopt appendhistory extendedglob notify
 unsetopt autocd nomatch
 bindkey -v
 autoload -U colors && colors
