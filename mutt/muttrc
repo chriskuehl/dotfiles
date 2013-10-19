@@ -6,7 +6,6 @@ set mbox="~/Mail"
 set record="+.Sent"
 set postponed="+.Drafts"
 set spoolfile="~/Mail"
-set pager=less
 
 mailboxes `echo -n "+ "; find ~/Mail -maxdepth 1 -type d -name ".*" -printf "+'%f' "`
 macro index c "<change-folder>?<toggle-mailboxes>" "open a different folder"
