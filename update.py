@@ -2,13 +2,49 @@
 import glob
 import os
 
-os.system("git submodule init")
-print("git submodule init")
-os.system("git submodule update")
-print("git submodule update")
+home = os.path.expanduser("~")
+print("Target directory is: {}".format(home))
 
+print("Updating submodules...")
+os.system("git submodule init")
+print("\tgit submodule init")
+os.system("git submodule update")
+print("\tgit submodule update")
+
+print("Updating dotfiles...")
 for file in glob.glob("*"):
 	if not(file.endswith(".py")):
-		cmd = "ln -s {} ~/.{}".format(os.path.abspath(file), file)
-		print(cmd)
+		path = home + "/." + file
+		print("\t{}".format(path))
+		
+		if os.path.exists(path):
+			os.remove(path)
+
+		cmd = "ln -s {} {}".format(os.path.abspath(file), path)
+		print("\t\t" + cmd)
 		os.system(cmd)
+
+# leave me alone!
+print("Getting rid of history files...")
+
+histfiles = [
+	"lesshst", # why does my pager keep history...?
+	"grails_history",
+	"histfile",
+	"mysql_history",
+	"nano_history",
+	"sqlite_history",
+	"bash_history",
+	"zsh_history"
+]
+
+for histfile in histfiles:
+	path = home + "/." + histfile
+	print("\t" + path)
+
+	if os.path.exists(path):
+		os.remove(path)
+
+	cmd = "ln -s /dev/null {}".format(path)
+	print("\t\t" + cmd)
+	os.system(cmd)
