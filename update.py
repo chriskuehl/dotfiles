@@ -17,7 +17,7 @@ for file in glob.glob("*"):
 		path = home + "/." + file
 		print("\t{}".format(path))
 		
-		if os.path.exists(path):
+		if os.path.lexists(path):
 			os.remove(path)
 
 		cmd = "ln -s {} {}".format(os.path.abspath(file), path)
