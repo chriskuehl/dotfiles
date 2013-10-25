@@ -11,6 +11,8 @@ if len(sys.argv) > 1:
 else:
 	home = os.path.expanduser("~")
 
+use_rel_link = sys.argv > 2
+
 print("Target directory is: {}".format(home))
 
 print("Updating submodules...")
@@ -27,8 +29,9 @@ for file in glob.glob("*"):
 		
 		if os.path.lexists(path):
 			os.remove(path)
-
-		cmd = "ln -s {} {}".format(os.path.abspath(file), path)
+		
+		from_path = (".dotfiles/" + file) if use_rel_link else os.path.abspath(file)
+		cmd = "ln -s {} {}".format(from_path, path)
 		print("\t\t" + cmd)
 		os.system(cmd)
 
