@@ -48,3 +48,7 @@ for histfile in histfiles:
 	cmd = "ln -s /dev/null {}".format(path)
 	print("\t\t" + cmd)
 	os.system(cmd)
+
+# handle special cases
+os.system("touch {}/.mutt/muttrc-local".format(home))
+print("touch {}/.mutt/muttrc-local".format(home))
