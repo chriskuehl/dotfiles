@@ -155,3 +155,7 @@ nnoremap <C-L> :nohl<CR><C-L>
 
 nnoremap j gj
 nnoremap k gk
+
+if $USELESS_TERM == "yes"
+	colorscheme elflord
+endif
