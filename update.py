@@ -11,7 +11,7 @@ if len(sys.argv) > 1:
 else:
 	home = os.path.expanduser("~")
 
-use_rel_link = sys.argv > 2
+use_rel_link = len(sys.argv) > 2
 
 print("Target directory is: {}".format(home))
 
