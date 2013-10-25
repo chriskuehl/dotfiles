@@ -1,8 +1,16 @@
 #!/usr/bin/env python3
 import glob
 import os
+import sys
 
-home = os.path.expanduser("~")
+if len(sys.argv) > 1:
+	home = sys.argv[1]
+
+	if home.endswith("/"):
+		home = home[0:-1]
+else:
+	home = os.path.expanduser("~")
+
 print("Target directory is: {}".format(home))
 
 print("Updating submodules...")
