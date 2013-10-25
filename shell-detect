@@ -22,3 +22,9 @@ unset SHELL_GNOME
 if which gconftool-2 > /dev/null; then
 	export SHELL_GNOME="yes"
 fi
+
+if [ -f ~/.useless-term ]; then
+	export USELESS_TERM=yes
+else
+	export USELESS_TERM=no
+fi
