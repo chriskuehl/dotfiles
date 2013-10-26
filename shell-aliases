@@ -6,7 +6,8 @@ alias d19="ssh root@d19.me"
 alias ocf="ssh ckuehl@ssh.ocf.berkeley.edu"
 alias mvm="ssh chris@chris-mvm.local"
 alias trenders="ssh root@trenders.org"
-alias helium="ssh root@helium.techxonline.net"
+alias helium="ssh -p 23 root@helium.techxonline.net"
+alias heliumc="ssh root@helium.techxonline.net"
 
 # commands
 alias ls="ls --color"
