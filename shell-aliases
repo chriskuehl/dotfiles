@@ -7,8 +7,9 @@ alias ocf="ssh ckuehl@ssh.ocf.berkeley.edu"
 alias mvm="ssh chris@chris-mvm.local"
 alias trenders="ssh root@trenders.org"
 alias helium="ssh -p 23 root@helium.techxonline.net"
+alias hv="ssh -t -p 23 root@helium.techxonline.net ssh"
 alias heliumc="ssh root@helium.techxonline.net"
-alias 19="ssh -t root@helium.techxonline.net ssh nineteen@manager"
+alias 19="ssh -t -p 23 root@helium.techxonline.net ssh nineteen@manager"
 alias ocf-commit="git commit --amend --author=\"Chris Kuehl <ckuehl@ocf.berkeley.edu>\""
 
 # commands
