@@ -1,0 +1,8 @@
+[user]
+	name = Chris Kuehl
+	email = ckuehl@ocf.berkeley.edu
+[push]
+	default = matching
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore
