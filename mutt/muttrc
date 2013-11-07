@@ -11,6 +11,9 @@ mailboxes `echo -n "+ "; find ~/Mail -maxdepth 1 -type d -name ".*" -printf "+'%
 macro index c "<change-folder>?<toggle-mailboxes>" "open a different folder"
 macro pager c "<change-folder>?<toggle-mailboxes>" "open a different folder"
 
+set sort = 'threads'
+set sort_aux = 'reverse-last-date-received'
+
 color normal    white default
 color attachment brightyellow default
 color hdrdefault cyan default
