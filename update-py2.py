@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # alternative updater using python 2
-import glob
-import os
+import glob, os
 
 os.system("git submodule init")
 print "git submodule init"
