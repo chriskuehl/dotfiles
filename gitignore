@@ -3,6 +3,7 @@
 .DS_Store
 .DS_Store?
 ._*
+.nfs*
 .Spotlight-V100
 .Trashes
 ehthumbs.db
