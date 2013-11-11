@@ -3,6 +3,12 @@ import glob
 import os
 import sys
 
+
+def exec(cmd, depth = 0):
+	print(("\t" * depth) +  cmd)
+	os.system(cmd)
+
+
 if len(sys.argv) > 1:
 	home = sys.argv[1]
 
@@ -16,10 +22,8 @@ use_rel_link = len(sys.argv) > 2
 print("Target directory is: {}".format(home))
 
 print("Updating submodules...")
-os.system("git submodule init")
-print("\tgit submodule init")
-os.system("git submodule update")
-print("\tgit submodule update")
+exec("git submodule init", 1)
+exec("git submodule update", 1)
 
 print("Updating dotfiles...")
 for file in glob.glob("*"):
@@ -31,9 +35,7 @@ for file in glob.glob("*"):
 			os.remove(path)
 		
 		from_path = (".dotfiles/" + file) if use_rel_link else os.path.abspath(file)
-		cmd = "ln -s {} {}".format(from_path, path)
-		print("\t\t" + cmd)
-		os.system(cmd)
+		exec("ln -s {} {}".format(from_path, path), 2)
 
 # leave me alone!
 print("Getting rid of history files...")
@@ -55,21 +57,13 @@ for histfile in histfiles:
 
 	if os.path.exists(path):
 		os.remove(path)
-
-	cmd = "ln -s /dev/null {}".format(path)
-	print("\t\t" + cmd)
-	os.system(cmd)
+	
+	exec("ln -s /dev/null {}".format(path), 2)
 
 # handle special cases
-os.system("touch {}/.mutt/muttrc-local".format(home))
-print("touch {}/.mutt/muttrc-local".format(home))
+exec("touch {}/.mutt/muttrc-local".format(home))
 
 # are we on ocf?
 if os.path.exists("{}/.ocf".format(home)):
-	cmd = "rm {}/.gitconfig".format(home)
-	print(cmd)
-	os.system(cmd)
-
-	cmd = "ln -s {}/.gitconfig-ocf {}/.gitconfig".format(home, home)
-	print(cmd)
-	os.system(cmd)
+	exec("rm {}/.gitconfig".format(home))
+	exec("ln -s {}/.gitconfig-ocf {}/.gitconfig".format(home, home))
