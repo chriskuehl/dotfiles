@@ -63,3 +63,13 @@ for histfile in histfiles:
 # handle special cases
 os.system("touch {}/.mutt/muttrc-local".format(home))
 print("touch {}/.mutt/muttrc-local".format(home))
+
+# are we on ocf?
+if os.path.exists("{}/.ocf".format(home)):
+	cmd = "rm {}/.gitconfig".format(home)
+	print(cmd)
+	os.system(cmd)
+
+	cmd = "ln -s {}/.gitconfig-ocf {}/.gitconfig".format(home, home)
+	print(cmd)
+	os.system(cmd)
