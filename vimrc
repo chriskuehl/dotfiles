@@ -140,7 +140,7 @@ function TabToggle()
 	endif
 endfunction
 
-nmap <F9> mz:execute TabToggle()<CR>
+nmap <F9> :call TabToggle()<CR>
 nmap <F8> :noh<CR>
 
 "------------------------------------------------------------
