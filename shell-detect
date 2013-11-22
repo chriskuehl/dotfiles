@@ -23,6 +23,12 @@ if which gconftool-2 > /dev/null; then
 	export SHELL_GNOME="yes"
 fi
 
+if [ -f ~/.ocf ]; then
+	export OCF=yes
+else
+	export OCF=no
+fi
+
 if [ -z "$USELESS_TERM" ]; then
 	# are we connected from a useless (or not useless) term?
 	if [ -n "$LC_USELESS_TERM" ]; then
