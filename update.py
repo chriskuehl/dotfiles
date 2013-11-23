@@ -25,6 +25,8 @@ print("Updating submodules...")
 exec("git submodule init", 1)
 exec("git submodule update", 1)
 
+ocf = os.path.exists(home + "/.ocf")
+
 print("Updating dotfiles...")
 for file in glob.glob("*"):
 	if not(file.endswith(".py")):
