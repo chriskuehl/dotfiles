@@ -66,6 +66,6 @@ for histfile in histfiles:
 exec("touch {}/.mutt/muttrc-local".format(home))
 
 # are we on ocf?
-if os.path.exists("{}/.ocf".format(home)):
+if ocf:
 	exec("rm {}/.gitconfig".format(home))
 	exec("ln -s {}/.gitconfig-ocf {}/.gitconfig".format(home, home))
