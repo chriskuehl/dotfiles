@@ -27,10 +27,23 @@ exec("git submodule update", 1)
 
 ocf = os.path.exists(home + "/.ocf")
 
+special_cases = {
+	"terminalrc": ".config/Terminal/terminalrc"
+}
+
 print("Updating dotfiles...")
 for file in glob.glob("*"):
 	if not(file.endswith(".py")):
 		path = home + "/." + file
+
+		if file in special_cases:
+			path = home + "/" + special_cases[file]
+			path_dir = os.path.dirname(path)
+
+			# make directories if necessary
+			if not os.path.exists(path_dir):
+				os.makedirs(path_dir)
+
 		print("\t{}".format(path))
 		
 		if os.path.lexists(path):
