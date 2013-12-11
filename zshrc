@@ -15,11 +15,13 @@ compinit
 promptinit
 
 if [[ $EUID -ne 0 ]]; then
-	PROMPT_COLOR=green # if root
-else
+	PROMPT_COLOR=green
+	PROMPT_SYMBOL="$"
+else # if root
 	PROMPT_COLOR=red
+	PROMPT_SYMBOL="#"
 fi
 
-PROMPT="%{$fg_bold[$PROMPT_COLOR]%}%n@%m%{$reset_color%}:%{$fg_bold[blue]%}%~%{$reset_color%}# "
+PROMPT="%{$fg_bold[$PROMPT_COLOR]%}%n@%m%{$reset_color%}:%{$fg_bold[blue]%}%~%{$reset_color%}$PROMPT_SYMBOL "
 
 source ~/.shell-includes
