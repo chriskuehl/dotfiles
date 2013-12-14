@@ -18,6 +18,17 @@ alias nux="ssh root@nuxusa.com"
 # common stuff
 alias ocf-commit="git commit --amend --author=\"Chris Kuehl <ckuehl@ocf.berkeley.edu>\""
 
+# fix ssh-agent in tmux
+# https://coderwall.com/p/_s_xda
+fixssh() {
+  for key in SSH_AUTH_SOCK SSH_CONNECTION SSH_CLIENT; do
+    if (tmux show-environment | grep "^${key}" > /dev/null); then
+      value=`tmux show-environment | grep "^${key}" | sed -e "s/^[A-Z_]*=//"`
+      export ${key}="${value}"
+    fi
+  done
+}
+
 # fix some basic utils
 alias ls="ls --color"
 alias grep="grep --color=auto"
