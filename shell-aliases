@@ -1,25 +1,5 @@
 # common SSH
-alias ssh="ssh -o SendEnv=LC_USELESS_TERM"
-alias mercury="ssh root@mercury.techxonline.net"
-alias 61a="TERM=xterm; ssh cs61a-aop@star.cs.berkeley.edu"
-alias d19="ssh root@d19.me"
-alias ocf="ssh ckuehl@ssh.ocf.berkeley.edu"
-alias ocfs="ssh ckuehl@supernova.ocf.berkeley.edu"
-alias mvm="ssh chris@chris-mvm.local"
-alias trenders="ssh root@trenders.org"
-alias helium="ssh -A -p 23 root@helium.techxonline.net"
-alias hv="ssh -t -p 23 root@helium.techxonline.net ssh"
-alias heliumc="ssh root@helium.techxonline.net"
-alias 19="ssh -t -p 23 root@helium.techxonline.net ssh nineteen@manager"
-alias 19c="ssh -XC nineteen@helium.techxonline.net"
-alias lynn="ssh lynn@mercury.techxonline.net"
-alias nux="ssh root@nuxusa.com"
-alias nuxn="ssh nuxusa@nuxusa.com"
-alias fluffy="ssh fluffy@mercury.techxonline.net"
-alias printhost="ssh -L 8443:printhost:443 ckuehl@supernova.ocf.berkeley.edu"
-
-# common stuff
-alias ocf-commit="git commit --amend --author=\"Chris Kuehl <ckuehl@ocf.berkeley.edu>\""
+alias mercury="ssh lynn@mercury.techxonline.net"
 
 # fix ssh-agent in tmux
 # https://coderwall.com/p/_s_xda

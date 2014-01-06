@@ -1,4 +1,3 @@
 export EDITOR="vim"
 export VISUAL="vim"
 export GIT_EDITOR="vim"
-export GPGKEY="DB78D4BF"

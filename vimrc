@@ -12,11 +12,6 @@ execute pathogen#infect()
 
 map <C-n> :NERDTreeTabsToggle<CR>
 
-" Disable arrow keys for navigation
-map <Left> <Nop>
-map <Right> <Nop>
-map <Up> <Nop>
-map <Down> <Nop>
 
 " Tab movement
 map <C-H> :execute "tabmove" tabpagenr() - 2 <CR>

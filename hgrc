@@ -1,9 +1,8 @@
 [ui]
-username = Chris Kuehl <chris@techxonline.net>
+username = Lynn Tsai <lynntsai@gmail.com>
 editor = vim
 
 [web]
-#cacerts = /home/chris/dev/certs/root-ca-certs.pem
 
 [extensions]
 hgext.bookmarks =
