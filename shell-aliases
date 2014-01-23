@@ -16,6 +16,7 @@ alias lynn="ssh lynn@mercury.techxonline.net"
 alias nux="ssh root@nuxusa.com"
 alias nuxn="ssh nuxusa@nuxusa.com"
 alias fluffy="ssh fluffy@mercury.techxonline.net"
+alias printhost="ssh -L 8443:printhost:443 ckuehl@supernova.ocf.berkeley.edu"
 
 # common stuff
 alias ocf-commit="git commit --amend --author=\"Chris Kuehl <ckuehl@ocf.berkeley.edu>\""
