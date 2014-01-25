@@ -17,6 +17,7 @@ alias lynn="ssh lynn@mercury.techxonline.net"
 alias nux="ssh root@nuxusa.com"
 alias nuxn="ssh nuxusa@nuxusa.com"
 alias fluffy="ssh fluffy@mercury.techxonline.net"
+alias sheep="ssh root@sheep.fluffy.cc"
 alias printhost="ssh -L 8443:printhost:443 ckuehl@supernova.ocf.berkeley.edu"
 
 # common stuff
