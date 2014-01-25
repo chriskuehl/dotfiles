@@ -2,6 +2,7 @@
 alias ssh="ssh -o SendEnv=LC_USELESS_TERM"
 alias mercury="ssh root@mercury.techxonline.net"
 alias 61a="TERM=xterm; ssh cs61a-aop@star.cs.berkeley.edu"
+alias 61b="TERM=xterm; ssh cs61b-wn@star.cs.berkeley.edu"
 alias d19="ssh root@d19.me"
 alias ocf="ssh ckuehl@ssh.ocf.berkeley.edu"
 alias ocfs="ssh ckuehl@supernova.ocf.berkeley.edu"
