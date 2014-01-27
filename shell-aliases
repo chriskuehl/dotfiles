@@ -44,4 +44,5 @@ fi
 
 if [[ $SHELL_PLATFORM == "solaris" ]]; then
 	alias ls="gls --color"
+	unalias ssh
 fi
