@@ -1,0 +1,4 @@
+PATH=$PATH:/usr/bin/:/usr/sww/bin/:/usr/local/bin/:/share/b/grading/bin/:/home/ff/cs61b/bin/arch/sun4v/; export PATH
+
+[[ -z ${MASTER} ]] && export MASTER=${LOGNAME%-*}
+[[ -z ${MASTERDIR} ]] && export MASTERDIR=$(eval echo ~${MASTER})
