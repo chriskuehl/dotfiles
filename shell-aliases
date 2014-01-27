@@ -22,4 +22,6 @@ fi
 
 if [[ $SHELL_PLATFORM == "solaris" ]]; then
 	alias ls="gls --color"
+	alias grep="ggrep --color"
+	unalias ssh
 fi
