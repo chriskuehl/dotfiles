@@ -1,6 +1,7 @@
 # common SSH
 alias ssh="ssh -o SendEnv=LC_USELESS_TERM"
 alias mercury="ssh root@mercury.techxonline.net"
+alias chris="ssh chris@mercury.techxonline.net"
 alias 61a="TERM=xterm; ssh cs61a-aop@star.cs.berkeley.edu"
 alias 61b="TERM=xterm; ssh cs61b-wn@star.cs.berkeley.edu"
 alias d19="ssh root@d19.me"
