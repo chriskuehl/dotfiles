@@ -86,4 +86,5 @@ if ocf:
 
 # are we on cs61b?
 if cs61b:
+	exec("rm {}/.shell-custom".format(home))
 	exec("ln -s {}/.shell-custom-61b {}/.shell-custom".format(home, home))
