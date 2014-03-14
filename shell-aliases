@@ -21,6 +21,7 @@ alias nuxn="ssh nuxusa@nuxusa.com"
 alias fluffy="ssh fluffy@mercury.techxonline.net"
 alias sheep="ssh root@sheep.fluffy.cc"
 alias printhost="ssh -L 8443:printhost:443 ckuehl@supernova.ocf.berkeley.edu"
+alias pkick="sudo puppet-trigger && sudo tail -f /var/log/syslog"
 
 # common stuff
 alias ocf-commit="git commit --amend --author=\"Chris Kuehl <ckuehl@ocf.berkeley.edu>\""
