@@ -1,30 +1,40 @@
-# common SSH
 alias ssh="ssh -o SendEnv=LC_USELESS_TERM"
+
+# mercury
 alias mercury="ssh root@mercury.techxonline.net"
 alias chris="ssh chris@mercury.techxonline.net"
-alias 61a="TERM=xterm; ssh cs61a-aop@star.cs.berkeley.edu"
-alias 61b="TERM=xterm; ssh cs61b-wn@star.cs.berkeley.edu"
-alias d19="ssh root@d19.me"
-alias ocf="ssh ckuehl@ssh.ocf.berkeley.edu"
-alias ocfs="ssh ckuehl@supernova.ocf.berkeley.edu"
-alias ocfa="ssh -t ckuehl@supernova.ocf.berkeley.edu \"tmux new 'sudo /opt/ocf/packages/create/create.py -i; zsh'\""
-alias mvm="ssh chris@chris-mvm.local"
-alias trenders="ssh root@trenders.org"
+alias lynn="ssh lynn@mercury.techxonline.net"
+alias fluffy="ssh fluffy@mercury.techxonline.net"
+
+# helium
 alias helium="ssh -A -p 23 root@helium.techxonline.net"
 alias hv="ssh -t -p 23 root@helium.techxonline.net ssh"
 alias heliumc="ssh root@helium.techxonline.net"
 alias 19="ssh -t -p 23 root@helium.techxonline.net ssh nineteen@manager"
 alias 19c="ssh -XC nineteen@helium.techxonline.net"
-alias lynn="ssh lynn@mercury.techxonline.net"
+
+# random
+alias trenders="ssh root@trenders.org"
+alias sheep="ssh root@sheep.fluffy.cc"
+
+# design19
+alias d19="ssh root@d19.me"
 alias nux="ssh root@nuxusa.com"
 alias nuxn="ssh nuxusa@nuxusa.com"
-alias fluffy="ssh fluffy@mercury.techxonline.net"
-alias sheep="ssh root@sheep.fluffy.cc"
-alias printhost="ssh -L 8443:printhost:443 ckuehl@supernova.ocf.berkeley.edu"
-alias pkick="sudo puppet-trigger && sudo tail -f /var/log/syslog"
 
-# common stuff
-alias ocf-commit="git commit --amend --author=\"Chris Kuehl <ckuehl@ocf.berkeley.edu>\""
+# courses
+alias 61a="TERM=xterm; ssh cs61a-aop@star.cs.berkeley.edu"
+alias 61b="TERM=xterm; ssh cs61b-wn@star.cs.berkeley.edu"
+
+# ocf
+alias ocf="ssh ckuehl@ssh.ocf.berkeley.edu"
+alias ocfs="ssh ckuehl@supernova.ocf.berkeley.edu"
+alias ocfa="ssh -t ckuehl@supernova.ocf.berkeley.edu \"tmux new 'sudo /opt/ocf/packages/create/create.py -i; zsh'\""
+alias ocfr="ssh ckuehl@raptors.ocf.berkeley.edu"
+alias phost="ssh -L 8443:printhost:443 ckuehl@supernova.ocf.berkeley.edu"
+
+# non-ssh
+alias pkick="sudo puppet-trigger && sudo tail -f /var/log/syslog"
 
 # fix ssh-agent in tmux
 # https://coderwall.com/p/_s_xda
