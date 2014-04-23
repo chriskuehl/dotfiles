@@ -24,7 +24,7 @@ alias nuxn="ssh nuxusa@nuxusa.com"
 
 # courses
 alias 61a="TERM=xterm; ssh cs61a-aop@star.cs.berkeley.edu"
-alias 61b="TERM=xterm; ssh cs61b-wn@star.cs.berkeley.edu"
+alias 61b="TERM=xterm; ssh cs61b-wn@pulsar.eecs.berkeley.edu"
 
 # ocf
 alias ocf="ssh ckuehl@ssh.ocf.berkeley.edu"
