@@ -32,6 +32,7 @@ alias ocfs="ssh ckuehl@supernova.ocf.berkeley.edu"
 alias ocfa="ssh -t ckuehl@supernova.ocf.berkeley.edu \"tmux new 'sudo /opt/ocf/packages/create/create.py -i; zsh'\""
 alias ocfr="ssh ckuehl@raptors.ocf.berkeley.edu"
 alias phost="ssh -L 8443:printhost:443 ckuehl@supernova.ocf.berkeley.edu"
+alias bsheep="ssh ckuehl@blacksheep.ocf.berkeley.edu"
 
 # non-ssh
 alias pkick="sudo puppet-trigger && sudo tail -f /var/log/syslog"
