@@ -114,6 +114,8 @@ if exists("b:did_indent")
     finish
 endif
 
+set expandtab
+
 let s:cpo_save = &cpo
 set cpo&vim
 
