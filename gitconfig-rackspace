@@ -1,0 +1,8 @@
+[user]
+	name = Chris Kuehl
+	email = chris.kuehl2@rackspace.com
+[push]
+	default = matching
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore

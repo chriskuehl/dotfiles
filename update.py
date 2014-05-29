@@ -26,6 +26,7 @@ exec("git submodule init", 1)
 exec("git submodule update", 1)
 
 ocf = os.path.exists(home + "/.ocf")
+rackspace = os.path.exists(home + "/.rackspace")
 cs61b = os.path.exists(home + "/.61b")
 
 special_cases = {
@@ -83,6 +84,11 @@ exec("touch {}/.mutt/muttrc-local".format(home))
 if ocf:
 	exec("rm {}/.gitconfig".format(home))
 	exec("ln -s {}/.gitconfig-ocf {}/.gitconfig".format(home, home))
+
+# are we on rackspace?
+if rackspace:
+	exec("rm {}/.gitconfig".format(home))
+	exec("ln -s {}/.gitconfig-rackspace {}/.gitconfig".format(home, home))
 
 # are we on cs61b?
 if cs61b:
