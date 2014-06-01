@@ -162,3 +162,11 @@ nnoremap k gk
 if $USELESS_TERM == "yes"
 	colorscheme elflord
 endif
+
+" Highlight trailing whitespace
+highlight ExtraWhitespace ctermbg=blue guibg=blue
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
