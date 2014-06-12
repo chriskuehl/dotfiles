@@ -6,3 +6,5 @@
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore
+[url "https://github.com/"]
+	insteadOf = git://github.com/
