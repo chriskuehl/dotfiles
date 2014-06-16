@@ -5,3 +5,7 @@
 [submodule "vim-nerdtree-tabs"]
 	path = vim/bundle/vim-nerdtree-tabs
 	url = git@github.com:jistr/vim-nerdtree-tabs.git
+
+[submodule "vim-javascript"]
+	path = vim/bundle/vim-javascript
+	url = git@github.com:pangloss/vim-javascript.git
