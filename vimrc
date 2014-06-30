@@ -2,6 +2,8 @@
 " have made, as well as sanely reset options when re-sourcing .vimrc
 set nocompatible
 
+set t_Co=256
+
 " Attempt to determine the type of a file based on its name and possibly its
 " contents. Use this to allow intelligent auto-indenting for each filetype,
 " and for plugins that are filetype specific.
@@ -159,6 +161,7 @@ nnoremap <C-L> :nohl<CR><C-L>
 nnoremap j gj
 nnoremap k gk
 
+colorscheme ron
 if $USELESS_TERM == "yes"
 	colorscheme elflord
 endif
@@ -170,3 +173,8 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
+
+" airline
+let g:airline_theme             = 'luna'
+let g:airline_enable_branch     = 1
+let g:airline_enable_syntastic  = 1

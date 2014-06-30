@@ -24,4 +24,5 @@ fi
 
 PROMPT="%{$fg_bold[$PROMPT_COLOR]%}%n@%m%{$reset_color%}:%{$fg_bold[blue]%}%~%{$reset_color%}$PROMPT_SYMBOL "
 
+export TERM=xterm-256color
 source ~/.shell-includes
