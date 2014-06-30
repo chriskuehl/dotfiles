@@ -47,10 +47,10 @@ for file in glob.glob("*"):
 				os.makedirs(path_dir)
 
 		print("\t{}".format(path))
-		
+
 		if os.path.lexists(path):
 			os.remove(path)
-		
+
 		from_path = (".dotfiles/" + file) if use_rel_link else os.path.abspath(file)
 		exec("ln -s {} {}".format(from_path, path), 2)
 
@@ -74,7 +74,7 @@ for histfile in histfiles:
 
 	if os.path.exists(path):
 		os.remove(path)
-	
+
 	exec("ln -s /dev/null {}".format(path), 2)
 
 # handle special cases
