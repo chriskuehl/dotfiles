@@ -178,3 +178,6 @@ autocmd BufWinLeave * call clearmatches()
 let g:airline_theme             = 'luna'
 let g:airline_enable_branch     = 1
 let g:airline_enable_syntastic  = 1
+
+" Map <C-J> to split line
+nnoremap <NL> i<CR><ESC>
