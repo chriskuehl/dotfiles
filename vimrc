@@ -2,6 +2,8 @@
 " have made, as well as sanely reset options when re-sourcing .vimrc
 set nocompatible
 
+set t_Co=256
+
 " Attempt to determine the type of a file based on its name and possibly its
 " contents. Use this to allow intelligent auto-indenting for each filetype,
 " and for plugins that are filetype specific.
@@ -12,10 +14,9 @@ execute pathogen#infect()
 
 map <C-n> :NERDTreeTabsToggle<CR>
 
-
 " Tab movement
 map <C-H> :execute "tabmove" tabpagenr() - 2 <CR>
-map <C-J> :execute "tabmove" tabpagenr() <CR>
+map <C-L> :execute "tabmove" tabpagenr() <CR>
 
 " Add mapping for inserting blank lines above/below
 " http://stackoverflow.com/questions/6765211/vim-command-to-insert-blank-line-in-normal-mode
@@ -154,6 +155,23 @@ nnoremap <C-L> :nohl<CR><C-L>
 nnoremap j gj
 nnoremap k gk
 
+colorscheme ron
 if $USELESS_TERM == "yes"
 	colorscheme elflord
 endif
+
+" Highlight trailing whitespace
+highlight ExtraWhitespace ctermbg=blue guibg=blue
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+
+" airline
+let g:airline_theme             = 'luna'
+let g:airline_enable_branch     = 1
+let g:airline_enable_syntastic  = 1
+
+" Map <C-J> to split line
+nnoremap <NL> i<CR><ESC>
