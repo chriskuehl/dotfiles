@@ -20,4 +20,4 @@
 
 [submodule "ctrlp.vim"]
 	path = vim/bundle/ctrlp.vim
-	url = git@github.com/kien/ctrlp.vim.git
+	url = git@github.com:kien/ctrlp.vim.git
