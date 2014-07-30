@@ -178,3 +178,6 @@ let g:airline_enable_syntastic  = 1
 
 " Map <C-J> to split line
 nnoremap <NL> i<CR><ESC>
+
+" Ignore dependencies and spam for ctrlp
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
