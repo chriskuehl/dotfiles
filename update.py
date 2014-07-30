@@ -79,6 +79,7 @@ for histfile in histfiles:
 
 # handle special cases
 exec("touch {}/.mutt/muttrc-local".format(home))
+exec("touch {}/.tmux-local.conf".format(home))
 
 # are we on ocf?
 if ocf:
