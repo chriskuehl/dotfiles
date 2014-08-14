@@ -22,8 +22,8 @@ use_rel_link = len(sys.argv) > 2
 print("Target directory is: {}".format(home))
 
 print("Updating submodules...")
-exec("git submodule init", 1)
-exec("git submodule update", 1)
+exec("git submodule sync", 1)
+exec("git submodule update --init", 1)
 
 ocf = os.path.exists(home + "/.ocf")
 rackspace = os.path.exists(home + "/.rackspace")
