@@ -2,6 +2,8 @@
 " have made, as well as sanely reset options when re-sourcing .vimrc
 set nocompatible
 
+set t_Co=256
+
 " Attempt to determine the type of a file based on its name and possibly its
 " contents. Use this to allow intelligent auto-indenting for each filetype,
 " and for plugins that are filetype specific.
@@ -12,10 +14,15 @@ execute pathogen#infect()
 
 map <C-n> :NERDTreeTabsToggle<CR>
 
+" Disable arrow keys for navigation
+map <Left> <Nop>
+map <Right> <Nop>
+map <Up> <Nop>
+map <Down> <Nop>
 
 " Tab movement
 map <C-H> :execute "tabmove" tabpagenr() - 2 <CR>
-map <C-J> :execute "tabmove" tabpagenr() <CR>
+map <C-L> :execute "tabmove" tabpagenr() <CR>
 
 " Add mapping for inserting blank lines above/below
 " http://stackoverflow.com/questions/6765211/vim-command-to-insert-blank-line-in-normal-mode
@@ -60,10 +67,8 @@ set wildmenu
 " Show partial commands in the last line of the screen
 set showcmd
 
-" Highlight searches (use <C-L> to temporarily turn off highlighting; see the
-" mapping of <C-L> below)
+" Highlight searches (use <C-C> to temporarily turn off highlighting)
 set hlsearch
-
 
 "------------------------------------------------------------
 " Usability options {{{1
@@ -147,13 +152,32 @@ nmap <F8> :noh<CR>
 " which is the default
 map Y y$
 
-" Map <C-L> (redraw screen) to also turn off search highlighting until the
-" next search
-nnoremap <C-L> :nohl<CR><C-L>
+" Ctrl-C to disable highlighting
+nnoremap <C-C> :nohl<CR><silent><C-C>
 
 nnoremap j gj
 nnoremap k gk
 
+colorscheme ron
 if $USELESS_TERM == "yes"
 	colorscheme elflord
 endif
+
+" Highlight trailing whitespace
+highlight ExtraWhitespace ctermbg=blue guibg=blue
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+
+" airline
+let g:airline_theme             = 'luna'
+let g:airline_enable_branch     = 1
+let g:airline_enable_syntastic  = 1
+
+" Map <C-J> to split line
+nnoremap <NL> i<CR><ESC>
+
+" Ignore dependencies and spam for ctrlp
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'

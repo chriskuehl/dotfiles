@@ -29,6 +29,14 @@ else
 	export OCF=no
 fi
 
+if [ -d "$HOME/dev/projects" ]; then
+	if [ -z "$PYTHONPATH" ]; then
+		export PYTHONPATH="$HOME/dev/projects"
+	else
+		PYTHONPATH="$HOME/dev/projects:$PYTHONPATH"
+	fi
+fi
+
 if [ -z "$USELESS_TERM" ]; then
 	# are we connected from a useless (or not useless) term?
 	if [ -n "$LC_USELESS_TERM" ]; then
