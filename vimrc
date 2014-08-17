@@ -14,6 +14,12 @@ execute pathogen#infect()
 
 map <C-n> :NERDTreeTabsToggle<CR>
 
+" Disable arrow keys for navigation
+map <Left> <Nop>
+map <Right> <Nop>
+map <Up> <Nop>
+map <Down> <Nop>
+
 " Tab movement
 map <C-H> :execute "tabmove" tabpagenr() - 2 <CR>
 map <C-L> :execute "tabmove" tabpagenr() <CR>
@@ -61,10 +67,8 @@ set wildmenu
 " Show partial commands in the last line of the screen
 set showcmd
 
-" Highlight searches (use <C-L> to temporarily turn off highlighting; see the
-" mapping of <C-L> below)
+" Highlight searches (use <C-C> to temporarily turn off highlighting)
 set hlsearch
-
 
 "------------------------------------------------------------
 " Usability options {{{1
@@ -148,9 +152,8 @@ nmap <F8> :noh<CR>
 " which is the default
 map Y y$
 
-" Map <C-L> (redraw screen) to also turn off search highlighting until the
-" next search
-nnoremap <C-L> :nohl<CR><C-L>
+" Ctrl-C to disable highlighting
+nnoremap <C-C> :nohl<CR><silent><C-C>
 
 nnoremap j gj
 nnoremap k gk
@@ -175,3 +178,6 @@ let g:airline_enable_syntastic  = 1
 
 " Map <C-J> to split line
 nnoremap <NL> i<CR><ESC>
+
+" Ignore dependencies and spam for ctrlp
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
