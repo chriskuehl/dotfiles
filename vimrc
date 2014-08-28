@@ -181,3 +181,8 @@ nnoremap <NL> i<CR><ESC>
 
 " Ignore dependencies and spam for ctrlp
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
+autocmd FileType python setlocal et
+autocmd FileType email setlocal et
+autocmd FileType mail setlocal et
+autocmd FileType markdown setlocal et
