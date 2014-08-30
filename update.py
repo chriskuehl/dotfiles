@@ -35,7 +35,7 @@ special_cases = {
 
 print("Updating dotfiles...")
 for file in glob.glob("*"):
-	if not(file.endswith(".py")):
+	if not file.endswith(".py") and not file == 'scripts':
 		path = home + "/." + file
 
 		if file in special_cases:
