@@ -186,3 +186,4 @@ autocmd FileType python setlocal et
 autocmd FileType email setlocal et
 autocmd FileType mail setlocal et
 autocmd FileType markdown setlocal et
+autocmd FileType ruby setlocal et sw=2 sts=4
