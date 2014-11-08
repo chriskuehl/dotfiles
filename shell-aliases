@@ -61,6 +61,11 @@ alias ll="ls -l"
 alias la="ls -lA"
 alias grep="grep --color=auto"
 
+# typos
+alias l="ls"
+alias sl="ls"
+alias dc="cd"
+
 if [[ $SHELL_PLATFORM == "osx" ]]; then
 	alias ls="gls -h --color"
 fi
