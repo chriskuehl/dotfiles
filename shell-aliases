@@ -69,10 +69,6 @@ alias s="ls"
 alias dc="cd"
 alias d="cd"
 
-if [[ $SHELL_PLATFORM == "osx" ]]; then
-	alias ls="gls -h --color"
-fi
-
 if [[ $SHELL_PLATFORM == "solaris" ]]; then
 	alias ls="gls -h --color"
 	alias grep="ggrep --color"
