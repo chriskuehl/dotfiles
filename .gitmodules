@@ -1,23 +1,27 @@
 [submodule "nerdtree"]
 	path = vim/bundle/nerdtree
-	url = git@github.com:scrooloose/nerdtree.git
+	url = https://github.com:scrooloose/nerdtree/
 
 [submodule "vim-nerdtree-tabs"]
 	path = vim/bundle/vim-nerdtree-tabs
-	url = git@github.com:jistr/vim-nerdtree-tabs.git
+	url = https://github.com:jistr/vim-nerdtree-tabs/
 
 [submodule "vim-javascript"]
 	path = vim/bundle/vim-javascript
-	url = git@github.com:pangloss/vim-javascript.git
+	url = https://github.com:pangloss/vim-javascript/
 
 [submodule "vim-airline"]
 	path = vim/bundle/vim-airline
-	url = git@github.com:bling/vim-airline.git
+	url = https://github.com:bling/vim-airline/
 
 [submodule "vim-fugitive"]
 	path = vim/bundle/vim-fugitive
-	url = git@github.com:tpope/vim-fugitive.git
+	url = https://github.com:tpope/vim-fugitive/
 
 [submodule "ctrlp.vim"]
 	path = vim/bundle/ctrlp.vim
-	url = git@github.com:kien/ctrlp.vim.git
+	url = https://github.com:kien/ctrlp.vim/
+
+[submodule "vim/bundle/puppet"]
+	path = vim/bundle/puppet
+	url = https://github.com/rodjek/vim-puppet

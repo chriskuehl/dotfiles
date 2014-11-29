@@ -1,27 +1,38 @@
-# common SSH
-alias mercury="ssh lynn@mercury.techxonline.net"
+# git
+alias ga="git add -A"
+alias gp="git push"
+alias gl="git log"
+alias gll="git log --pretty=fuller"
+alias gs="git status"
+alias gd="git diff"
+alias gdc="git diff --cached"
+alias gc="git commit -v"
+alias gb="git branch -v"
+alias gch="git checkout"
+alias gpu="git pull"
 
-# fix ssh-agent in tmux
-# https://coderwall.com/p/_s_xda
-fixssh() {
-  for key in SSH_AUTH_SOCK SSH_CONNECTION SSH_CLIENT; do
-    if (tmux show-environment | grep "^${key}" > /dev/null); then
-      value=`tmux show-environment | grep "^${key}" | sed -e "s/^[A-Z_]*=//"`
-      export ${key}="${value}"
-    fi
-  done
-}
-
-# fix some basic utils
-alias ls="ls --color"
+# core utils
+alias ls="ls -h --color"
+alias ll="ls -l"
+alias la="ls -lA"
 alias grep="grep --color=auto"
 
-if [[ $SHELL_PLATFORM == "osx" ]]; then
-	alias ls="gls --color"
-fi
+# typos
+alias l="ls"
+alias sl="ls"
+alias s="ls"
+alias dc="cd"
+alias d="cd"
 
 if [[ $SHELL_PLATFORM == "solaris" ]]; then
-	alias ls="gls --color"
+	alias ls="gls -h --color"
 	alias grep="ggrep --color"
 	unalias ssh
 fi
+
+# functions
+colors() {
+	for i in {0..255} ; do
+		printf "\x1b[38;5;${i}mcolour${i}\n"
+	done
+}

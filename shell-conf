@@ -4,7 +4,7 @@ GRAILS_PATH="$HOME/dev/grails-$GRAILS_VERSION/"
 if [[ -d "$GRAILS_PATH" ]]; then
 	GRAILS_HOME="$GRAILS_PATH"
 	export GRAILS_HOME
-	
+
 	PATH=$GRAILS_HOME/bin:$PATH
 	export PATH
 

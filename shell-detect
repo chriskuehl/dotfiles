@@ -2,7 +2,7 @@ case $OSTYPE in
 	darwin*)
 		export SHELL_PLATFORM="osx"
 	;;
-	
+
 	solaris*)
 		export SHELL_PLATFORM="solaris"
 	;;
