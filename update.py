@@ -22,8 +22,8 @@ use_rel_link = len(sys.argv) > 2
 print("Target directory is: {}".format(home))
 
 print("Updating submodules...")
-exec("git submodule init", 1)
-exec("git submodule update", 1)
+exec("git submodule sync", 1)
+exec("git submodule update --init", 1)
 
 ocf = os.path.exists(home + "/.ocf")
 cs61b = os.path.exists(home + "/.61b")
@@ -34,7 +34,7 @@ special_cases = {
 
 print("Updating dotfiles...")
 for file in glob.glob("*"):
-	if not(file.endswith(".py")):
+	if not file.endswith(".py") and not file == 'scripts':
 		path = home + "/." + file
 
 		if file in special_cases:
@@ -46,10 +46,10 @@ for file in glob.glob("*"):
 				os.makedirs(path_dir)
 
 		print("\t{}".format(path))
-		
+
 		if os.path.lexists(path):
 			os.remove(path)
-		
+
 		from_path = (".dotfiles/" + file) if use_rel_link else os.path.abspath(file)
 		exec("ln -s {} {}".format(from_path, path), 2)
 
@@ -73,11 +73,12 @@ for histfile in histfiles:
 
 	if os.path.exists(path):
 		os.remove(path)
-	
+
 	exec("ln -s /dev/null {}".format(path), 2)
 
 # handle special cases
 exec("touch {}/.mutt/muttrc-local".format(home))
+exec("touch {}/.tmux-local.conf".format(home))
 
 # are we on ocf?
 if ocf:
@@ -86,4 +87,5 @@ if ocf:
 
 # are we on cs61b?
 if cs61b:
+	exec("rm {}/.shell-custom".format(home))
 	exec("ln -s {}/.shell-custom-61b {}/.shell-custom".format(home, home))
