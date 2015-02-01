@@ -75,12 +75,6 @@ alias s="ls"
 alias dc="cd"
 alias d="cd"
 
-if [[ $SHELL_PLATFORM == "solaris" ]]; then
-	alias ls="gls -h --color"
-	alias grep="ggrep --color"
-	unalias ssh
-fi
-
 # functions
 colors() {
 	for i in {0..255} ; do
