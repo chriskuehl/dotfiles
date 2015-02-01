@@ -1,12 +1,15 @@
 # git
 alias ga="git add -A"
+alias gaa="git add"
 alias gp="git push"
 alias gl="git log"
 alias gll="git log --pretty=fuller"
 alias gs="git status"
 alias gd="git diff"
+alias gdh="git diff HEAD"
 alias gdc="git diff --cached"
 alias gc="git commit -v"
+alias gco="git commit"
 alias gb="git branch -v"
 alias gch="git checkout"
 alias gpu="git pull"
@@ -23,12 +26,6 @@ alias sl="ls"
 alias s="ls"
 alias dc="cd"
 alias d="cd"
-
-if [[ $SHELL_PLATFORM == "solaris" ]]; then
-	alias ls="gls -h --color"
-	alias grep="ggrep --color"
-	unalias ssh
-fi
 
 # functions
 colors() {
