@@ -58,9 +58,11 @@ alias gdh="git diff HEAD"
 alias gdc="git diff --cached"
 alias gc="git commit -v"
 alias gco="git commit"
-alias gb="git branch -v"
+alias gb="git branch -vv"
 alias gch="git checkout"
 alias gpu="git pull"
+alias gcp="git cherry-pick"
+alias gm="git merge"
 
 # core utils
 alias ls="ls -h --color"
