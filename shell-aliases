@@ -64,6 +64,7 @@ alias gch="git checkout"
 alias gpu="git pull"
 alias gcp="git cherry-pick"
 alias gm="git merge"
+alias gso="git show"
 
 # core utils
 alias ls="ls -h --color"
