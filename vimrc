@@ -15,8 +15,11 @@ execute pathogen#infect()
 map <C-n> :NERDTreeTabsToggle<CR>
 
 " Tab movement
-map <C-H> :execute "tabmove" tabpagenr() - 2 <CR>
-map <C-L> :execute "tabmove" tabpagenr() <CR>
+map <C-H> gT
+map <C-L> gt
+
+"map <C-H> :execute "tabmove" tabpagenr() - 2 <CR>
+"map <C-L> :execute "tabmove" tabpagenr() <CR>
 
 syntax on
 set hidden
