@@ -142,3 +142,4 @@ autocmd FileType mail setlocal et
 autocmd FileType markdown setlocal et sw=4 sts=4 ts=4
 autocmd FileType ruby setlocal et sw=2 sts=2 ts=2
 autocmd FileType puppet setlocal et sw=2 sts=2 ts=2
+autocmd FileType cucumber setlocal et sw=4 sts=4 ts=4
