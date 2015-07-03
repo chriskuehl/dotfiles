@@ -1,3 +1,4 @@
+#!/bin/bash
 # disable caps lock
 /usr/bin/setxkbmap -option ctrl:nocaps
 
@@ -8,7 +9,8 @@
 xset r on
 xset r rate 200 30
 
-if [ "$HOST" != "neon" ]; then
-	# disable mouse acceleration
+if [ "$(hostname)" != "neon" ]; then
 	xset m 0 0
+else
+	xset m 2 4
 fi
