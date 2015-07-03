@@ -8,5 +8,7 @@
 xset r on
 xset r rate 200 30
 
-# disable mouse acceleration
-xset m 0 5000
+if [ "$HOST" != "neon" ]; then
+	# disable mouse acceleration
+	xset m 0 0
+fi
