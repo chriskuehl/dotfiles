@@ -35,4 +35,6 @@ zstyle ':completion:*' menu select
 #  done
 #}
 
-export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
+if [ -z "$SSH_AUTH_SOCK" ]; then
+	export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
+fi
