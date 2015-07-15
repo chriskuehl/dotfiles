@@ -46,6 +46,7 @@ alias bsheep="ssh ckuehl@blacksheep.ocf.berkeley.edu"
 # non-ssh
 alias kl=". ~/dev/venv/kl-api2.7.7/bin/activate"
 alias pkick="sudo puppet-trigger && sudo tail -f /var/log/syslog"
+alias dquilt="quilt --quiltrc=${HOME}/.quiltrc-dpkg"
 
 # git
 alias ga="git add -A"
