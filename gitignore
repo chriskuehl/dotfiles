@@ -9,3 +9,5 @@
 ehthumbs.db
 Thumbs.db
 .swp
+.pybuild
+.pc
