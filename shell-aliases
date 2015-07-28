@@ -67,6 +67,8 @@ alias gcp="git cherry-pick"
 alias gm="git merge"
 alias gso="git show"
 alias gg="git grep"
+alias gst="git stash"
+alias gss="git stash show -p"
 
 # core utils
 alias ls="ls -h --color"
@@ -80,6 +82,7 @@ alias sl="ls"
 alias s="ls"
 alias dc="cd"
 alias d="cd"
+alias gti="git"
 
 # functions
 showcolors() {
