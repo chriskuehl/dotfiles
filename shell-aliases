@@ -1,4 +1,4 @@
-alias ssh="ssh -o SendEnv=LC_USELESS_TERM"
+alias rr=". ~/.zshrc"
 
 # mercury
 alias mercury="ssh root@mercury.techxonline.net"
