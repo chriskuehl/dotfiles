@@ -1,17 +1,3 @@
-GRAILS_VERSION=2.3.5
-GRAILS_PATH="$HOME/dev/grails-$GRAILS_VERSION/"
-
-if [[ -d "$GRAILS_PATH" ]]; then
-	GRAILS_HOME="$GRAILS_PATH"
-	export GRAILS_HOME
-
-	PATH=$GRAILS_HOME/bin:$PATH
-	export PATH
-
-	JAVA_HOME=/usr/lib/jvm/default-java/
-	export JAVA_HOME
-fi
-
 # fix cursor placement when scrolling in history
 bindkey -M viins "\e[A" up-line-or-history
 bindkey -M viins "\e[B" down-line-or-history
