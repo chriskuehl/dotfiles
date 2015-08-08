@@ -66,7 +66,7 @@ alias gpu="git pull"
 alias gcp="git cherry-pick"
 alias gm="git merge"
 alias gso="git show"
-alias gg="git grep"
+alias gg="git grep -n"
 alias gst="git stash"
 alias gss="git stash show -p"
 
