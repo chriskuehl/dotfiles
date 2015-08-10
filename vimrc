@@ -88,7 +88,7 @@ set notimeout ttimeout ttimeoutlen=200
 set shiftwidth=4
 set tabstop=4
 set softtabstop=4
-set noexpandtab
+set expandtab
 
 " allow toggling between local and default mode
 function TabToggle()
