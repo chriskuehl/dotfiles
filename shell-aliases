@@ -2,6 +2,7 @@ alias rr=". ~/.zshrc"
 
 # mercury
 alias mercury="ssh root@mercury.techxonline.net"
+alias nitrogen="ssh ckuehl@nitrogen.techxonline.net"
 alias chris="ssh chris@mercury.techxonline.net"
 alias lynn="ssh lynn@mercury.techxonline.net"
 alias fluffy="ssh fluffy@mercury.techxonline.net"
