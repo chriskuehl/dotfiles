@@ -36,6 +36,7 @@ alias 61c="TERM=xterm; ssh cs61c-ase@pulsar.eecs.berkeley.edu"
 alias 70="TERM=xterm; ssh cs70-bi@hive17.cs.berkeley.edu"
 alias 161="TERM=xterm; ssh cs161-fo@hive17.cs.berkeley.edu"
 alias 16a="TERM=xterm; ssh ee16a-uy@cory.eecs.berkeley.edu"
+alias 186="TERM=xterm; ssh cs186-cj@cory.eecs.berkeley.edu"
 
 # ocf
 alias ocf="ssh ckuehl@ssh.ocf.berkeley.edu"
