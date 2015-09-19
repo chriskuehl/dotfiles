@@ -2,9 +2,11 @@
 	name = Chris Kuehl
 	email = ckuehl@ocf.berkeley.edu
 [push]
-	default = matching
+	default = simple
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore
 [color]
 	ui = true
+[alias]
+	rgrep = !git grep

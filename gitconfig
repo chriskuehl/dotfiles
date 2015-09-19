@@ -8,3 +8,5 @@
 	excludesfile = ~/.gitignore
 [color]
 	ui = true
+[alias]
+	rgrep = !git grep
