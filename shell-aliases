@@ -89,6 +89,8 @@ alias dc="cd"
 alias d="cd"
 alias gti="git"
 
+alias smallpdf="convert -density 300 -quality 25 -compress jpeg"
+
 # functions
 showcolors() {
 	for i in {0..255} ; do
