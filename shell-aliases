@@ -55,6 +55,11 @@ alias dquilt="quilt --quiltrc=${HOME}/.quiltrc-dpkg"
 alias yelp="sudo cp /etc/resolv.conf{.yelp,}"
 alias mine="sudo cp /etc/resolv.conf{.mine,}"
 
+alias smallpdf="convert -density 300 -quality 25 -compress jpeg"
+
+alias venv='T=$(mktemp -d) && { virtualenv -p python3 "$T" && . "${T}/bin/activate" }'
+alias venv2='T=$(mktemp -d) && { virtualenv -p python2 "$T" && . "${T}/bin/activate" }'
+
 # git
 alias ga="git add -A"
 alias gaa="git add"
@@ -91,8 +96,6 @@ alias s="ls"
 alias dc="cd"
 alias d="cd"
 alias gti="git"
-
-alias smallpdf="convert -density 300 -quality 25 -compress jpeg"
 
 # functions
 showcolors() {
