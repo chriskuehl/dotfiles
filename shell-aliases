@@ -50,7 +50,6 @@ alias bsheep="ssh ckuehl@blacksheep.ocf.berkeley.edu"
 alias dev='ssh -A dev18-devc'
 
 # non-ssh
-alias pkick="sudo puppet-trigger && sudo tail -f /var/log/syslog"
 alias dquilt="quilt --quiltrc=${HOME}/.quiltrc-dpkg"
 alias yelp="sudo cp /etc/resolv.conf{.yelp,}"
 alias mine="sudo cp /etc/resolv.conf{.mine,}"
