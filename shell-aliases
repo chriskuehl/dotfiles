@@ -7,12 +7,6 @@ alias chris="ssh chris@mercury.techxonline.net"
 alias lynn="ssh lynn@mercury.techxonline.net"
 alias fluffy="ssh fluffy@mercury.techxonline.net"
 
-# neon
-alias neon="ssh ckuehl@neon.techxonline.net"
-
-# sodium
-alias sodium="ssh root@sodium.techxonline.net"
-
 # helium
 alias helium="ssh -A -p 23 root@helium.techxonline.net"
 alias hv="ssh -t -p 23 root@helium.techxonline.net ssh"
