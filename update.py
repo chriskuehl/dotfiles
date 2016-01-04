@@ -26,7 +26,6 @@ exec("git submodule sync", 1)
 exec("git submodule update --init", 1)
 
 ocf = os.path.exists(home + "/.ocf")
-cs61b = os.path.exists(home + "/.61b")
 
 special_cases = {
 	"terminalrc": ".config/Terminal/terminalrc"
