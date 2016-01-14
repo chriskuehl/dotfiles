@@ -90,6 +90,9 @@ alias dc="cd"
 alias d="cd"
 alias gti="git"
 
+# other stuff
+alias pc="pre-commit run --all-files"
+
 # functions
 showcolors() {
 	for i in {0..255} ; do
