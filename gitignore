@@ -11,3 +11,5 @@ Thumbs.db
 .swp
 .pybuild
 .pc
+.coverage.*
+*.egg-info

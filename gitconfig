@@ -10,3 +10,9 @@
 	ui = true
 [alias]
 	rgrep = !git grep
+[dif]
+	tool = vimdiff
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
