@@ -2,9 +2,6 @@
 username = Chris Kuehl <chris@techxonline.net>
 editor = vim
 
-[web]
-#cacerts = /home/chris/dev/certs/root-ca-certs.pem
-
 [extensions]
 hgext.bookmarks =
 hgext.convert = 
