@@ -2,6 +2,9 @@
 " have made, as well as sanely reset options when re-sourcing .vimrc
 set nocompatible
 
+" Disable ex mode
+map Q <Nop>
+
 set t_Co=256
 
 " Attempt to determine the type of a file based on its name and possibly its
