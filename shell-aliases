@@ -46,6 +46,9 @@ alias phost="ssh -L 8443:printhost:443 ckuehl@supernova.ocf.berkeley.edu"
 alias dphost="ssh -L 8443:dev-printhost:443 ckuehl@supernova.ocf.berkeley.edu"
 alias bsheep="ssh ckuehl@blacksheep.ocf.berkeley.edu"
 
+alias ocfp="ssh -D 2020 ckuehl@supernova.ocf.berkeley.edu"
+alias chromep="google-chrome --proxy-server='socks5://localhost:2020'"
+
 alias dev='ssh -A dev18-devc'
 
 # non-ssh
