@@ -49,7 +49,7 @@ alias bsheep="ssh ckuehl@blacksheep.ocf.berkeley.edu"
 alias ocfp="ssh -D 2020 ckuehl@supernova.ocf.berkeley.edu"
 alias chromep="google-chrome --proxy-server='socks5://localhost:2020'"
 
-alias dev='ssh -A dev18-devc'
+alias dev='ssh -A dev4-uswest1cdevc'
 
 # non-ssh
 alias dquilt="quilt --quiltrc=${HOME}/.quiltrc-dpkg"
