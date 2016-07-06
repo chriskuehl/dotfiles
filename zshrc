@@ -24,5 +24,7 @@ fi
 
 PROMPT="%{$fg_bold[$PROMPT_COLOR]%}%n@%m%{$reset_color%}:%{$fg_bold[blue]%}%~%{$reset_color%}$PROMPT_SYMBOL "
 
+export PATH=~/bin:/usr/sbin:/sbin/:/usr/local/sbin:$PATH
+
 export TERM=xterm-256color
 source ~/.shell-includes
