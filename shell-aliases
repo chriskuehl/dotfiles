@@ -1,4 +1,5 @@
 alias rr=". ~/.zshrc"
+alias mm='make minimal'
 
 # mercury
 alias mercury="ssh root@mercury.techxonline.net"
