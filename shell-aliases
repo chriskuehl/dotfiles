@@ -3,7 +3,7 @@ alias mm='make minimal'
 
 # mercury
 alias mercury="ssh root@mercury.techxonline.net"
-alias nitrogen="ssh ckuehl@nitrogen.techxonline.net"
+alias nitrogen="ssh -L 5000:localhost:5000 -L 5001:localhost:5001 ckuehl@nitrogen.techxonline.net"
 alias chris="ssh chris@mercury.techxonline.net"
 alias lynn="ssh lynn@mercury.techxonline.net"
 alias fluffy="ssh fluffy@mercury.techxonline.net"
