@@ -52,6 +52,8 @@ alias ocfp="ssh -D 2020 ckuehl@supernova.ocf.berkeley.edu"
 alias chromep="google-chrome --proxy-server='socks5://localhost:2020'"
 
 alias dev='ssh -A dev4-uswest1cdevc'
+alias bastp="ssh -A -D 2020 -L 44322:dev37-devc:44322 bastion.yelpcorp.com"
+alias bast="ssh -A bastion.yelpcorp.com"
 
 # non-ssh
 alias dquilt="quilt --quiltrc=${HOME}/.quiltrc-dpkg"
