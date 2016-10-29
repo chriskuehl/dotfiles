@@ -65,6 +65,8 @@ alias smallpdf="convert -density 300 -quality 25 -compress jpeg"
 alias venv='T=$(mktemp -d) && { virtualenv -p python3 "$T" && . "${T}/bin/activate" }'
 alias venv2='T=$(mktemp -d) && { virtualenv -p python2 "$T" && . "${T}/bin/activate" }'
 
+alias nenv='T2=$(mktemp -d) && { venv && pip install nodeenv && nodeenv --prebuilt "${T2}/nenv" && . "${T2}/nenv/bin/activate" }'
+
 # git
 alias ga="git add -A"
 alias gaa="git add"
@@ -72,9 +74,9 @@ alias gp="git push"
 alias gl="git log --decorate"
 alias gll="git log --decorate --pretty=fuller"
 alias gs="git status"
-alias gd="git diff"
-alias gdh="git diff HEAD"
-alias gdc="git diff --cached"
+alias gd="git diff -M"
+alias gdh="git diff HEAD -M"
+alias gdc="git diff --cached -M"
 alias gc="git commit -v"
 alias gco="git commit"
 alias gb="git branch -vv"
