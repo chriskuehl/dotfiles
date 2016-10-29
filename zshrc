@@ -22,7 +22,7 @@ else # if root
 	PROMPT_SYMBOL="#"
 fi
 
-PROMPT="%{$fg_bold[$PROMPT_COLOR]%}%n@%m%{$reset_color%}:%{$fg_bold[blue]%}%~%{$reset_color%}$PROMPT_SYMBOL "
+PROMPT="%(?..$fg[yellow][%?] )%{$fg_bold[$PROMPT_COLOR]%}%n@%m%{$reset_color%}:%{$fg_bold[blue]%}%~%{$reset_color%}$PROMPT_SYMBOL "
 
 export PATH=~/bin:/usr/sbin:/sbin/:/usr/local/sbin:$PATH
 
