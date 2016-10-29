@@ -63,7 +63,8 @@ histfiles = [
 	"nano_history",
 	"sqlite_history",
 	"bash_history",
-	"zsh_history"
+	"zsh_history",
+    'python_history',
 ]
 
 for histfile in histfiles:
