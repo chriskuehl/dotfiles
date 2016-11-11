@@ -104,6 +104,7 @@ alias dc="cd"
 alias d="cd"
 alias gti="git"
 alias Grep='grep'
+alias Less='less'
 
 # other stuff
 alias pc="pre-commit run --all-files"
