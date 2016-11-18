@@ -73,6 +73,7 @@ alias gaa="git add"
 alias gp="git push"
 alias gl="git log --decorate"
 alias gll="git log --decorate --pretty=fuller"
+alias gls='git ls-files'
 alias gs="git status"
 alias gd="git diff -M"
 alias gdh="git diff HEAD -M"
