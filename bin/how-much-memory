@@ -1,0 +1,7 @@
+#!/bin/bash
+set -euo pipefail
+
+pstree -p "$1" | grep -Eo '\([0-9]+\)' | grep -Eo '[0-9]+' | sort -u |
+while read p; do
+    cat /proc/"$p"/smaps
+done | awk '/Pss/ {mem += $2} END {print mem, "kB"}'

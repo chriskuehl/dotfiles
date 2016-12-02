@@ -1,0 +1,21 @@
+#!/bin/bash
+# usage: what-container [pid]
+set -euo pipefail
+
+get_container_init_from_pid() {
+    # search upwards from some pid until hitting pid1 in the container
+    local pid="$1"
+    local parent=$(awk '/PPid:/ {print $2}' "/proc/${pid}/status")
+    if grep -q docker-containerd-shim "/proc/${parent}/cmdline"; then
+        echo "$pid"
+    else
+        get_container_init_from_pid "$parent"
+    fi
+
+}
+
+pid="$1"
+pid1="$(get_container_init_from_pid "$pid")"
+docker ps -q  |
+    xargs -P 50 -n1 docker inspect -f "{{.State.Pid}}$(echo -en "\t"){{.Config.Hostname}}" |
+    awk "/${pid1}/ {print \$2}"
