@@ -1,0 +1,5 @@
+#!/bin/bash
+set -euo pipefail
+thing="$1"
+
+ps -ef | grep "$thing" | grep bash | awk '{print $2}' | xargs --replace bash -c 'echo -e "{}\n=====\n" && sudo cat /proc/{}/environ | xargs -0 -n1'
