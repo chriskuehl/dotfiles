@@ -22,7 +22,9 @@ else # if root
 	PROMPT_SYMBOL="#"
 fi
 
-PROMPT="%(?..$fg[yellow][%?] )%{$fg_bold[$PROMPT_COLOR]%}%n@%m%{$reset_color%}:%{$fg_bold[blue]%}%~%{$reset_color%}$PROMPT_SYMBOL "
+# protip: color codes in PROMPT need to be encased in %{....%}
+# https://github.com/robbyrussell/oh-my-zsh/issues/2314#issuecomment-32155974
+PROMPT="%(?..%{$fg[yellow]%}[%?] )%{$fg_bold[$PROMPT_COLOR]%}%n@%m%{$reset_color%}:%{$fg_bold[blue]%}%~%{$reset_color%}$PROMPT_SYMBOL "
 
 export PATH=~/bin:~/.bin:/usr/sbin:/sbin/:/usr/local/sbin:$PATH
 
