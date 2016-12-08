@@ -7,3 +7,4 @@ au BufNewFile,BufRead *.ida  setf asm
 au BufNewFile,BufRead *.jade  setf javascript
 au BufNewFile,BufRead *.styl  setf css
 au BufNewFile,BufRead *.sls  setf sls
+au BufNewFile,BufRead *.wsgi  setf python
