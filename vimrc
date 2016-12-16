@@ -40,6 +40,8 @@ set showcmd
 " Highlight searches (use <C-C> to temporarily turn off highlighting)
 set hlsearch
 
+set incsearch
+
 " Use case insensitive search, except when using capital letters
 set ignorecase
 set smartcase
@@ -138,7 +140,7 @@ let g:airline_enable_syntastic  = 1
 nnoremap <NL> i<CR><ESC>
 
 " Ignore dependencies and spam for ctrlp
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|\\.git\|virtualenv_run\|venv\|virtualenv\|virtualenv_emr\|pyc'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|\\.git/\|virtualenv_run/\|venv/\|virtualenv/\|virtualenv_emr/\|pyc'
 let g:ctrlp_max_files = 0
 
 autocmd FileType python setlocal et
