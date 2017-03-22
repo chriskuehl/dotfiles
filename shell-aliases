@@ -96,7 +96,7 @@ alias gss="git stash show -p"
 alias ls="ls -h --color"
 alias ll="ls -l"
 alias la="ls -lA"
-alias grep="grep --color=auto"
+alias grep="grep --line-buffered --color=auto"
 
 # typos
 alias l="ls"
