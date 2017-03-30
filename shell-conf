@@ -24,3 +24,8 @@ zstyle ':completion:*' menu select
 if [ -z "$SSH_AUTH_SOCK" ]; then
 	export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
 fi
+
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey '^xe' edit-command-line
+bindkey '^x^e' edit-command-line
