@@ -1,0 +1,6 @@
+#!/bin/bash -eux
+xrandr --output eDP-1 --mode 1440x900
+xrandr --output DP-1 --mode 1920x1200 --pos 1440x0
+xrandr --output HDMI-2 --mode 1920x1200 --pos 3360x0
+xfconf-query -c xfce4-panel -p /panels/panel-1/output-name -s monitor-1
+xfconf-query -c xfce4-panel -p /panels/panel-2/output-name -s monitor-1
