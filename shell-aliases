@@ -61,6 +61,8 @@ alias dquilt="quilt --quiltrc=${HOME}/.quiltrc-dpkg"
 alias yelp="sudo cp /etc/resolv.conf{.yelp,}"
 alias mine="sudo cp /etc/resolv.conf{.mine,}"
 
+alias badssh="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
+
 alias smallpdf="convert -density 300 -quality 25 -compress jpeg"
 
 alias venv='T=$(mktemp -d) && { virtualenv -p python3 "$T" && . "${T}/bin/activate" }'
