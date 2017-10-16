@@ -156,3 +156,5 @@ autocmd FileType htmlcheetah setlocal et sw=4 sts=4 ts=4
 set shortmess+=A
 
 let g:vim_markdown_folding_disabled = 1
+
+let g:jsx_ext_required = 0
