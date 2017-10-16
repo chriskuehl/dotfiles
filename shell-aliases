@@ -112,6 +112,8 @@ alias Gerp="grep"
 alias gerp="grep"
 alias Grep='grep'
 alias Less='less'
+alias seagull-run="seagull-run -f --not-again"
+alias seagull-ruin="seagull-run"
 
 # other stuff
 alias pc="pre-commit run --all-files"
