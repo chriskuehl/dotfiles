@@ -68,6 +68,8 @@ alias smallpdf="convert -density 300 -quality 25 -compress jpeg"
 alias venv='T=$(mktemp -d) && { virtualenv -p python3 "$T" && . "${T}/bin/activate" }'
 alias venv2='T=$(mktemp -d) && { virtualenv -p python2 "$T" && . "${T}/bin/activate" }'
 
+alias tmp='cd $(mktemp -d)'
+
 alias nenv='T2=$(mktemp -d) && { venv && pip install nodeenv && nodeenv --prebuilt "${T2}/nenv" && . "${T2}/nenv/bin/activate" }'
 
 # git
