@@ -131,6 +131,14 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
+
+highlight HardTabs ctermbg=88 guibg=blue
+match HardTabs /\t/
+autocmd BufWinEnter * match HardTabs /\t/
+autocmd InsertEnter * match HardTabs /\t/
+autocmd InsertLeave * match HardTabs /\t/
+autocmd BufWinLeave * call clearmatches()
+
 " airline
 let g:airline_theme             = 'luna'
 let g:airline_enable_branch     = 1
