@@ -133,10 +133,10 @@ autocmd BufWinLeave * call clearmatches()
 
 
 highlight HardTabs ctermbg=88 guibg=blue
-match HardTabs /\t/
-autocmd BufWinEnter * match HardTabs /\t/
-autocmd InsertEnter * match HardTabs /\t/
-autocmd InsertLeave * match HardTabs /\t/
+2match HardTabs /\t/
+autocmd BufWinEnter * 2match HardTabs /\t/
+autocmd InsertEnter * 2match HardTabs /\t/
+autocmd InsertLeave * 2match HardTabs /\t/
 autocmd BufWinLeave * call clearmatches()
 
 " airline
