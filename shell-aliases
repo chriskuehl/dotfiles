@@ -97,7 +97,7 @@ alias gst="git stash"
 alias gss="git stash show -p"
 
 # core utils
-alias ls="ls -h --color"
+alias ls="ls -h --color=auto"
 alias ll="ls -l"
 alias la="ls -lA"
 alias grep="grep --line-buffered --color=auto"
