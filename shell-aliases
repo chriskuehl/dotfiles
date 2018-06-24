@@ -72,6 +72,8 @@ alias tmp='cd $(mktemp -d)'
 
 alias nenv='T2=$(mktemp -d) && { venv && pip install nodeenv && nodeenv --prebuilt "${T2}/nenv" && . "${T2}/nenv/bin/activate" }'
 
+alias youtube-mp3='youtube-dl --extract-audio --audio-format mp3  --prefer-ffmpeg'
+
 # git
 alias ga="git add -A"
 alias gaa="git add"
