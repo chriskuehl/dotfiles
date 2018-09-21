@@ -51,9 +51,9 @@ alias bsheep="ssh ckuehl@blacksheep.ocf.berkeley.edu"
 alias ocfp="ssh -D 2020 ckuehl@supernova.ocf.berkeley.edu"
 alias chromep="google-chrome --proxy-server='socks5://localhost:2020'"
 
-alias dev='ssh -A xenialdev1-uswest1cdevc'
+alias dev='ssh -A dev45-uswest1adevc'
 alias devp='ssh -A -p 2222 localhost'
-alias bastp="ssh -A -D 2020 -L 44322:xenialdev1-uswest1cdevc:44322 -L 2222:xenialdev1-uswest1cdevc:22 bastion.yelpcorp.com"
+alias bastp="ssh -A -D 2020 -L 44322:dev45-uswest1adevc:44322 -L 2222:dev45-uswest1adevc:22 bastion.yelpcorp.com"
 alias bast="ssh -A bastion.yelpcorp.com"
 
 # non-ssh
