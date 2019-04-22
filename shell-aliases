@@ -60,7 +60,11 @@ alias bast="ssh -A bastion.yelpcorp.com"
 alias dquilt="quilt --quiltrc=${HOME}/.quiltrc-dpkg"
 alias yelp="sudo cp /etc/resolv.conf{.yelp,}"
 alias mine="sudo cp /etc/resolv.conf{.mine,}"
+
 alias deploy-prod="deploy-prod --i-like-to-live-dangerously"
+alias seagull-run="seagull-run -f --not-again"
+alias seagull-ruin="seagull-run"
+alias ymt-run="ymt-run -f --not-again"
 
 alias badssh="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
 
@@ -117,8 +121,6 @@ alias Gerp="grep"
 alias gerp="grep"
 alias Grep='grep'
 alias Less='less'
-alias seagull-run="seagull-run -f --not-again"
-alias seagull-ruin="seagull-run"
 
 # other stuff
 alias pc="pre-commit run --all-files"
