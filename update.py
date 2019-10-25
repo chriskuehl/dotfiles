@@ -28,7 +28,8 @@ exec("git submodule update --init", 1)
 ocf = os.path.exists(home + "/.ocf")
 
 special_cases = {
-	"terminalrc": ".config/Terminal/terminalrc"
+	"terminalrc": ".config/Terminal/terminalrc",
+	"nvim-init.vim": ".config/nvim/init.vim",
 }
 
 print("Updating dotfiles...")
