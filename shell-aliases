@@ -79,6 +79,8 @@ alias nenv='T2=$(mktemp -d) && { venv && pip install nodeenv && nodeenv --prebui
 
 alias youtube-mp3='youtube-dl --extract-audio --audio-format mp3  --prefer-ffmpeg'
 
+alias speedtest='curl -o /dev/null http://speedtest.newark.linode.com/100MB-newark.bin'
+
 # git
 alias ga="git add -A"
 alias gaa="git add"
