@@ -1,0 +1,3 @@
+#!/bin/bash
+set -euo pipefail
+exec awk '{s+=$1} END {print s}'
