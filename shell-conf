@@ -10,20 +10,18 @@ bindkey "^?" backward-delete-char
 
 zstyle ':completion:*' menu select
 
-# fix ssh-agent in tmux
-# https://coderwall.com/p/_s_xda
-#fixssh() {
-#  for key in SSH_AUTH_SOCK SSH_CONNECTION SSH_CLIENT; do
-#    if (tmux show-environment | grep "^${key}" > /dev/null); then
-#      value=`tmux show-environment | grep "^${key}" | sed -e "s/^[A-Z_]*=//"`
-#      export ${key}="${value}"
-#    fi
-#  done
-#}
-
-if [ -z "$SSH_AUTH_SOCK" ]; then
-	export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
+# Only replace ~/.ssh/ssh_auth_sock if it doesn't already exist as a valid
+# symlink to an agent. This is to avoid a short connection (e.g. scp) in the
+# middle of a longer session from overwriting the already-valid agent.
+#
+# This does mean that a new session that outlives an older session will have
+# its agent break, but I don't see how to avoid this, and that scenario seems
+# less likely to me with my workflow.
+if [ -n "$SSH_AUTH_SOCK" -a ! -e ~/.ssh/ssh_auth_sock ]; then
+  ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
 fi
+
+export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
 
 autoload -U edit-command-line
 zle -N edit-command-line
