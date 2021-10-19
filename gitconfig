@@ -16,3 +16,5 @@
 	tool = vimdiff
 [difftool]
 	prompt = false
+[pull]
+	ff = only
