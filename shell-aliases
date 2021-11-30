@@ -1,5 +1,7 @@
 alias rr=". ~/.zshrc"
 alias mm='make minimal'
+alias py.test='py.test --tb=native'
+alias pytest='pytest --tb=native'
 
 # mercury
 alias mercury="ssh root@mercury.techxonline.net"
