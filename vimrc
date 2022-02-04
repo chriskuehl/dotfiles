@@ -170,6 +170,7 @@ let g:jsx_ext_required = 0
 let g:gitgutter_highlight_lines = 0
 
 let @p = 'oimport pdb; pdb.set_trace()pass'
+let @m = 'iimport typingdef main() -> typing.Optional[int]:passif __name__ == ''__main__'':raise SystemExit(main())'
 
 " Disable ctrl-a auto-incrementing numbers
 map <C-a> <Nop>
