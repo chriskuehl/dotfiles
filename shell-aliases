@@ -135,3 +135,7 @@ showcolors() {
 		printf "\x1b[38;5;${i}mcolour${i}\n"
 	done
 }
+
+sum() {
+    awk '{s+=$1} END {print s}'
+}
