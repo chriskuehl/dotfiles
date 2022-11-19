@@ -8,15 +8,9 @@
 	excludesfile = ~/.gitignore
 [color]
 	ui = true
-[alias]
-	rgrep = !git grep
-[dif]
-	tool = vimdiff
-[diff]
-	tool = vimdiff
-[difftool]
-	prompt = false
 [pull]
 	ff = only
+[init]
+	defaultBranch = main
 [url "https://github.com/"]
 	insteadOf = git://github.com/
