@@ -176,3 +176,10 @@ map <C-a> <Nop>
 " Disable terrible .sql default:
 " https://www.reddit.com/r/vim/comments/2om1ib/comment/cmop4zh/
 let g:omni_sql_no_default_maps = 1
+
+hi diffRemoved ctermfg=red
+hi diffAdded ctermfg=green
+
+hi GitGutterDelete ctermfg=red
+hi GitGutterAdd ctermfg=green
+hi GitGutterChange ctermfg=yellow
