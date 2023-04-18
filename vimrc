@@ -174,3 +174,7 @@ let @m = 'iimport typingdef main() -> typing.Optional[int]:passif __name_
 
 " Disable ctrl-a auto-incrementing numbers
 map <C-a> <Nop>
+
+" Disable terrible .sql default:
+" https://www.reddit.com/r/vim/comments/2om1ib/comment/cmop4zh/
+let g:omni_sql_no_default_maps = 1
