@@ -165,8 +165,6 @@ set shortmess+=A
 
 let g:vim_markdown_folding_disabled = 1
 
-let g:jsx_ext_required = 0
-
 let g:gitgutter_highlight_lines = 0
 
 let @p = 'oimport pdb; pdb.set_trace()pass'

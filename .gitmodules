@@ -12,7 +12,7 @@
 
 [submodule "vim-airline"]
 	path = vim/bundle/vim-airline
-	url = https://github.com/bling/vim-airline/
+	url = https://github.com/vim-airline/vim-airline/
 
 [submodule "vim-fugitive"]
 	path = vim/bundle/vim-fugitive
@@ -25,18 +25,6 @@
 [submodule "vim/bundle/puppet"]
 	path = vim/bundle/puppet
 	url = https://github.com/rodjek/vim-puppet
-[submodule "vim/bundle/salt-vim"]
-	path = vim/bundle/salt-vim
-	url = https://github.com/saltstack/salt-vim
-[submodule "vim/bundle/Dockerfile.vim"]
-	path = vim/bundle/Dockerfile.vim
-	url = https://github.com/ekalinin/Dockerfile.vim.git
-[submodule "vim/bundle/vim-scala"]
-	path = vim/bundle/vim-scala
-	url = https://github.com/derekwyatt/vim-scala.git
-[submodule "vim/bundle/vim-jinja"]
-	path = vim/bundle/vim-jinja
-	url = https://github.com/lepture/vim-jinja.git
 [submodule "vim/bundle/vim-markdown"]
 	path = vim/bundle/vim-markdown
 	url = https://github.com/plasticboy/vim-markdown.git
@@ -46,9 +34,6 @@
 [submodule "vim/bundle/rust"]
 	path = vim/bundle/rust
 	url = https://github.com/rust-lang/rust.vim
-[submodule "vim/bundle/vim-jsx"]
-	path = vim/bundle/vim-jsx
-	url = https://github.com/mxw/vim-jsx.git
 [submodule "vim/bundle/nginx.vim"]
 	path = vim/bundle/nginx.vim
 	url = https://github.com/chr4/nginx.vim
@@ -58,6 +43,3 @@
 [submodule "vim/bundle/vim-gitgutter"]
 	path = vim/bundle/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter
-[submodule "vim/bundle/vim-ft-bzl"]
-	path = vim/bundle/vim-ft-bzl
-	url = https://github.com/bazelbuild/vim-ft-bzl
