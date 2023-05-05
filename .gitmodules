@@ -49,3 +49,6 @@
 [submodule "vim/bundle/Vim-Jinja2-Syntax"]
 	path = vim/bundle/Vim-Jinja2-Syntax
 	url = https://github.com/Glench/Vim-Jinja2-Syntax
+[submodule "vim/bundle/toml"]
+	path = vim/bundle/toml
+	url = https://github.com/cespare/vim-toml.git
