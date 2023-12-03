@@ -9,8 +9,4 @@
 xset r on
 xset r rate 200 30
 
-if [ "$(hostname)" != "neon" ] && [ "$(hostname)" != "sodium" ]; then
-	xset m 0 0
-else
-	xset m 2 4
-fi
+xset m 0 0

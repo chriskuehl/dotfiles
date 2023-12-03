@@ -3,70 +3,14 @@ alias mm='make minimal'
 alias py.test='py.test --tb=native'
 alias pytest='pytest --tb=native'
 
-# mercury
-alias mercury="ssh root@mercury.techxonline.net"
-alias nitrogen="ssh -L 5000:localhost:5000 -L 5001:localhost:5001 ckuehl@nitrogen.techxonline.net"
-alias chris="ssh chris@mercury.techxonline.net"
-alias lynn="ssh lynn@mercury.techxonline.net"
-alias fluffy="ssh fluffy@mercury.techxonline.net"
-
-# helium
-alias helium="ssh -A -p 23 root@helium.techxonline.net"
-alias hv="ssh -t -p 23 root@helium.techxonline.net ssh"
-alias heliumc="ssh root@helium.techxonline.net"
-alias 19="ssh -t -p 23 root@helium.techxonline.net ssh nineteen@manager"
-alias 19c="ssh -XC nineteen@helium.techxonline.net"
-
-# random
-alias trenders="ssh root@trenders.org"
-alias sheep="ssh root@sheep.fluffy.cc"
-
-# design19
-alias d19="ssh root@d19.me"
-alias nux="ssh root@nuxusa.com"
-alias nuxn="ssh nuxusa@nuxusa.com"
-
-# courses
-alias 61a="TERM=xterm; ssh cs61a-aop@star.cs.berkeley.edu"
-alias 61b="TERM=xterm; ssh cs61b-wn@pulsar.eecs.berkeley.edu"
-alias 61c="TERM=xterm; ssh cs61c-ase@pulsar.eecs.berkeley.edu"
-alias 70="TERM=xterm; ssh cs70-bi@hive17.cs.berkeley.edu"
-alias 161="TERM=xterm; ssh cs161-fo@hive17.cs.berkeley.edu"
-alias 16a="TERM=xterm; ssh ee16a-uy@cory.eecs.berkeley.edu"
-alias 186="TERM=xterm; ssh cs186-cj@cory.eecs.berkeley.edu"
-alias 168="TERM=xterm; ssh cs168-hi@cory.eecs.berkeley.edu"
-alias 16b="TERM=xterm ssh ee16b-akp@cory.eecs.berkeley.edu"
-alias 162="TERM=xterm ssh cs162-cf@cory.eecs.berkeley.edu"
-alias c8='TERM=xterm ssh cs8-aib@cory.eecs.berkeley.edu'
-alias 170='TERM=xterm ssh cs170-wc@cory.eecs.berkeley.edu'
-
 # ocf
 alias ocf="ssh ckuehl@ssh.ocf.berkeley.edu"
 alias ocfs="ssh ckuehl@supernova.ocf.berkeley.edu"
-alias ocfa="sudo -u atool /opt/ocf/packages/create/create.py -i"
-alias ocfr="ssh ckuehl@raptors.ocf.berkeley.edu"
-alias phost="ssh -L 8443:printhost:443 ckuehl@supernova.ocf.berkeley.edu"
-alias whiteout="ssh -L 8443:whiteout:443 ckuehl@supernova.ocf.berkeley.edu"
-alias dphost="ssh -L 8443:dev-printhost:443 ckuehl@supernova.ocf.berkeley.edu"
-alias bsheep="ssh ckuehl@blacksheep.ocf.berkeley.edu"
-
-alias ocfp="ssh -D 2020 ckuehl@supernova.ocf.berkeley.edu"
-alias chromep="google-chrome --proxy-server='socks5://localhost:2020'"
 
 alias dev='ssh -A dev168-uswest1adevc'
-alias devp='ssh -A -p 2222 localhost'
-alias bastp="ssh -A -D 2020 -L 44322:dev45-uswest1adevc:44322 -L 2222:dev45-uswest1adevc:22 bastion.yelpcorp.com"
-alias bast="ssh -A bastion.yelpcorp.com"
 
 # non-ssh
 alias dquilt="quilt --quiltrc=${HOME}/.quiltrc-dpkg"
-alias yelp="sudo cp /etc/resolv.conf{.yelp,}"
-alias mine="sudo cp /etc/resolv.conf{.mine,}"
-
-alias seagull-run="seagull-run -f --not-again"
-alias seagull-ruin="seagull-run"
-alias ymt-run="ymt-run -f --not-again"
-alias yy="ymt-run; ymt-run"
 
 alias badssh="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
 
@@ -95,7 +39,6 @@ alias gd="git diff -M"
 alias gdh="git diff HEAD -M"
 alias gdc="git diff --cached -M"
 alias gc="git commit -v"
-alias gco="git commit"
 alias gb="git branch -vv"
 alias gch="git checkout"
 alias gpu="git pull"
@@ -103,7 +46,6 @@ alias gcp="git cherry-pick"
 alias gm="git merge"
 alias gso="git show --pretty=fuller --decorate -M"
 alias gg="git grep -n"
-alias gr="git rgrep -n"
 alias gst="git stash"
 alias gss="git stash show -p"
 
@@ -126,14 +68,11 @@ alias gerp="grep"
 alias Grep='grep'
 alias Less='less'
 
-# other stuff
-alias pc="pre-commit run --all-files"
-
 # functions
 showcolors() {
-	for i in {0..255} ; do
-		printf "\x1b[38;5;${i}mcolour${i}\n"
-	done
+    for i in {0..255} ; do
+        printf "\x1b[38;5;${i}mcolour${i}\n"
+    done
 }
 
 sum() {
