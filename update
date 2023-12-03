@@ -24,7 +24,7 @@ echo_cmd ln -fs "$(readlink -f terminalrc)" ~/.config/Terminal/terminalrc
 
 echo_cmd mkdir -p ~/.config/nvim
 echo_cmd rm -f ~/.config/nvim/init.vim
-echo_cmd ln -fs "$(readlink -f nvim-init.lua)" ~/.config/nvim/nvim.lua
+echo_cmd ln -fs "$(readlink -f nvim-init.lua)" ~/.config/nvim/init.lua
 
 for histfile in \
     lesshst \
