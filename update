@@ -1,0 +1,44 @@
+#!/bin/bash
+set -euo pipefail
+
+cd -- "$( dirname -- "${BASH_SOURCE[0]}" )"
+
+echo_cmd() {
+    echo >&2 "=> $@"
+    "$@"
+}
+
+echo_cmd git submodule sync
+echo_cmd git submodule update --init
+
+for f in *; do
+    if [ "$f" = "update" -o "$f" = "scripts" ]; then
+        continue
+    fi
+
+    echo_cmd ln -Tfs "$(readlink -f "$f")" "$HOME/.$f"
+done
+
+echo_cmd mkdir -p ~/.config/Terminal
+echo_cmd ln -fs "$(readlink -f terminalrc)" ~/.config/Terminal/terminalrc
+
+echo_cmd mkdir -p ~/.config/nvim
+echo_cmd rm -f ~/.config/nvim/init.vim
+echo_cmd ln -fs "$(readlink -f nvim-init.lua)" ~/.config/nvim/nvim.lua
+
+for histfile in \
+    lesshst \
+    grails_history \
+    histfile \
+    mysql_history \
+    nano_history \
+    sqlite_history \
+    bash_history \
+    zsh_history \
+    python_history \
+; do
+    echo_cmd ln -fs /dev/null "$HOME/.$histfile"
+done
+
+echo_cmd touch ~/.mutt/muttrc-local
+echo_cmd touch ~/.tmux-local.conf
