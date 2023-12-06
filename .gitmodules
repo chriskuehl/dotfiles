@@ -52,3 +52,6 @@
 [submodule "vim/bundle/toml"]
 	path = vim/bundle/toml
 	url = https://github.com/cespare/vim-toml.git
+[submodule "nvim/lazy.nvim"]
+	path = nvim/lazy.nvim
+	url = https://github.com/folke/lazy.nvim.git
