@@ -16,7 +16,16 @@ for f in *; do
         continue
     fi
 
-    echo_cmd ln -Tfs "$(readlink -f "$f")" "$HOME/.$f"
+    dest="$HOME/.$f"
+    if [ -d "$dest"  ]; then
+        if [ -L "$dest" ]; then
+            echo_cmd rm "$dest"
+        else
+            echo >&2 "already directory: $dest"
+            exit 1
+        fi
+    fi
+    echo_cmd ln -fs "$(readlink -f "$f")" "$dest"
 done
 
 echo_cmd mkdir -p ~/.config/Terminal
