@@ -220,3 +220,16 @@ vim.api.nvim_create_autocmd('LspAttach', {
         end, opts)
     end,
 })
+
+local function use_tabs()
+    vim.opt.expandtab = false
+    vim.api.nvim_set_hl(0, 'HardTabs', {})
+end
+
+vim.api.nvim_create_autocmd(
+    "FileType",
+    {
+        pattern = "go",
+        callback = use_tabs,
+    }
+)
