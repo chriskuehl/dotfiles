@@ -1,6 +1,5 @@
 [ui]
 username = Chris Kuehl <ckuehl@ckuehl.me>
-editor = vim
 
 [extensions]
 hgext.bookmarks =

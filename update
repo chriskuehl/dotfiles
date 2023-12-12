@@ -24,7 +24,15 @@ for f in *; do
             echo >&2 "already directory: $dest"
             exit 1
         fi
+    elif [ -L "$dest" ]; then
+        target=$(readlink -f "$dest")
+        if [[ "$target" = *-local ]]; then
+            echo >&2 "will not override locally-overridden $f (points to $dest)"
+            continue
+        fi
+
     fi
+
     echo_cmd ln -fs "$(readlink -f "$f")" "$dest"
 done
 
