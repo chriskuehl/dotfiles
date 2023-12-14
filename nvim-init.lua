@@ -46,6 +46,10 @@ require("lazy").setup(
             "https://github.com/neovim/nvim-lspconfig",
             commit = "cf3dd4a290084a868fac0e2e876039321d57111c",
         },
+        {
+            "https://github.com/rodjek/vim-puppet",
+            commit = "81943d532dee24f8518f855dfb17160809abfdfb",
+        },
     }
 )
 
