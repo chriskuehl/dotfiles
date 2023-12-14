@@ -7,8 +7,6 @@ alias pytest='pytest --tb=native'
 alias ocf="ssh ckuehl@ssh.ocf.berkeley.edu"
 alias ocfs="ssh ckuehl@supernova.ocf.berkeley.edu"
 
-alias dev='ssh -A dev168-uswest1adevc'
-
 # non-ssh
 alias dquilt="quilt --quiltrc=${HOME}/.quiltrc-dpkg"
 
