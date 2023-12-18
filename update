@@ -14,7 +14,7 @@ echo_cmd git submodule sync
 echo_cmd git submodule update --init
 
 for f in *; do
-    if [ "$f" = "update" -o "$f" = "scripts" ]; then
+    if [ "$f" = "update" -o "$f" = "scripts" -o "$f" = "misc" ]; then
         continue
     fi
 
