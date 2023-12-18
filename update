@@ -38,8 +38,8 @@ for f in *; do
     echo_cmd ln -fs "$(readlink -f "$f")" "$dest"
 done
 
-echo_cmd mkdir -p ~/.config/Terminal
-echo_cmd ln -fs "$(readlink -f terminalrc)" ~/.config/Terminal/terminalrc
+echo_cmd mkdir -p ~/.config/xfce4/terminal
+echo_cmd ln -fs "$(readlink -f terminalrc)" ~/.config/xfce4/terminal/terminalrc
 
 echo_cmd mkdir -p ~/.config/nvim
 echo_cmd rm -f ~/.config/nvim/init.vim
