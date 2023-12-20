@@ -50,6 +50,10 @@ require("lazy").setup(
             "https://github.com/rodjek/vim-puppet",
             commit = "81943d532dee24f8518f855dfb17160809abfdfb",
         },
+        {
+            "https://github.com/pangloss/vim-javascript",
+            commit = "c470ce1399a544fe587eab950f571c83cccfbbdc",
+        },
     }
 )
 
