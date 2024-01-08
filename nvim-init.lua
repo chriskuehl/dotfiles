@@ -53,6 +53,10 @@ require("lazy").setup(
         {
             "https://github.com/pangloss/vim-javascript",
             commit = "c470ce1399a544fe587eab950f571c83cccfbbdc",
+    },
+    {
+            "https://github.com/Glench/Vim-Jinja2-Syntax",
+            commit = "2c17843b074b06a835f88587e1023ceff7e2c7d1",
         },
     }
 )
@@ -122,6 +126,7 @@ vim.keymap.set({'n', 'i'}, '<C-n>', '<ESC>:NERDTreeTabsToggle<CR>')
 
 -- fzf
 vim.keymap.set({'n', 'i'}, '<C-p>', '<ESC>:Files<CR>')
+vim.keymap.set({'n', 'i'}, '<C-s>', '<ESC>:Rg<CR>')
 
 -- Highlight trailing whitespace
 local ID_MATCH_EXTRA_WHITESPACE = 1000
@@ -241,3 +246,11 @@ vim.api.nvim_create_autocmd(
         callback = use_tabs,
     }
 )
+
+vim.filetype.add({
+  extension = {
+     -- Starlark, but close enough.
+    star = 'python',
+    tilt = 'python',
+  }
+})
