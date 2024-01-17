@@ -8,3 +8,7 @@ else
     export GIT_EDITOR="vim"
 fi
 export GPGKEY="DB78D4BF"
+
+if type rg > /dev/null; then
+    export FZF_DEFAULT_COMMAND='rg --files --hidden --glob !.git'
+fi
