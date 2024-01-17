@@ -62,14 +62,14 @@ require("lazy").setup(
 )
 
 require("catppuccin").setup({
-    flavour = "mocha",
+    transparent_background = true,
     styles = {
         comments = {"bold"},
         conditionals = {},
     },
 })
 
-vim.cmd.colorscheme("catppuccin-mocha")
+vim.cmd.colorscheme("catppuccin-frappe")
 
 
 require("lualine").setup({
