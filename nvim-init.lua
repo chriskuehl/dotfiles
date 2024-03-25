@@ -78,7 +78,16 @@ require("lualine").setup({
         icons_enabled = false,
         component_separators = { left = '<', right = '>'},
         section_separators = { left = '<', right = '>'},
-    }
+    },
+    sections = {
+        lualine_c = {
+            {
+                'filename',
+                -- Show full path relative to CWD.
+                path = 1,
+            },
+        },
+    },
 })
 
 -- Disable mouse.
@@ -254,7 +263,10 @@ vim.api.nvim_create_autocmd(
     "FileType",
     {
         pattern = "go",
-        callback = use_tabs,
+        callback = function()
+            vim.opt.textwidth = 99
+            use_tabs()
+        end,
     }
 )
 
