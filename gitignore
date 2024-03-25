@@ -14,3 +14,4 @@ Thumbs.db
 .coverage.*
 *.egg-info
 .eggs
+.idea
