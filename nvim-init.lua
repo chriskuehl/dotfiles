@@ -53,10 +53,14 @@ require("lazy").setup(
         {
             "https://github.com/pangloss/vim-javascript",
             commit = "c470ce1399a544fe587eab950f571c83cccfbbdc",
-    },
-    {
+        },
+        {
             "https://github.com/Glench/Vim-Jinja2-Syntax",
             commit = "2c17843b074b06a835f88587e1023ceff7e2c7d1",
+        },
+        {
+            "https://github.com/nfnty/vim-nftables",
+            commit = "26f8a506c6f3e41f1e4a8d6aa94c9a79a666bbff",
         },
     }
 )
