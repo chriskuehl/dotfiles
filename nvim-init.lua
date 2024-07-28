@@ -5,65 +5,70 @@
 -- Use lazy.nvim for plugins.
 local lazypath = vim.fs.normalize("~/.dotfiles/nvim/lazy.nvim")
 vim.opt.rtp:prepend(lazypath)
-require("lazy").setup(
+local deps = {
     {
-        {
-            "https://github.com/catppuccin/nvim",
-            commit = "988c0b2dde4140572ed37c6b8b5d5deac0219f9f",
-            priority = 1000,
-        },
-        {
-            "https://github.com/nvim-lualine/lualine.nvim",
-            commit = "2248ef254d0a1488a72041cfb45ca9caada6d994",
-        },
-        {
-            "https://github.com/preservim/nerdtree",
-            commit = "9ec27d45a863aeb82fea56cebcb8a75a4e369fc9",
-            priority = 50,
-        },
-        {
-            "https://github.com/jistr/vim-nerdtree-tabs",
-            commit = "07d19f0299762669c6f93fbadb8249da6ba9de62",
-            priority = 60,
-        },
-        {
-            "https://github.com/tpope/vim-fugitive",
-            commit = "46eaf8918b347906789df296143117774e827616",
-        },
-        {
-            "https://github.com/mhinz/vim-signify",
-            commit = "7d538b77a5a8806e344b057f8846f6d0c035efa9",
-        },
-        {
-            "https://github.com/junegunn/fzf",
-            commit = "d21d5c9510170d74a7f959309da720b6df72ca01",
-        },
-        {
-            "https://github.com/junegunn/fzf.vim",
-            commit = "1e054c1d075d87903647db9320116d360eb8b024",
-        },
-        {
-            "https://github.com/neovim/nvim-lspconfig",
-            commit = "cf3dd4a290084a868fac0e2e876039321d57111c",
-        },
-        {
-            "https://github.com/rodjek/vim-puppet",
-            commit = "81943d532dee24f8518f855dfb17160809abfdfb",
-        },
-        {
-            "https://github.com/pangloss/vim-javascript",
-            commit = "c470ce1399a544fe587eab950f571c83cccfbbdc",
-        },
-        {
-            "https://github.com/Glench/Vim-Jinja2-Syntax",
-            commit = "2c17843b074b06a835f88587e1023ceff7e2c7d1",
-        },
-        {
-            "https://github.com/nfnty/vim-nftables",
-            commit = "26f8a506c6f3e41f1e4a8d6aa94c9a79a666bbff",
-        },
+        "https://github.com/catppuccin/nvim",
+        commit = "988c0b2dde4140572ed37c6b8b5d5deac0219f9f",
+        priority = 1000,
+    },
+    {
+        "https://github.com/nvim-lualine/lualine.nvim",
+        commit = "2248ef254d0a1488a72041cfb45ca9caada6d994",
+    },
+    {
+        "https://github.com/preservim/nerdtree",
+        commit = "9ec27d45a863aeb82fea56cebcb8a75a4e369fc9",
+        priority = 50,
+    },
+    {
+        "https://github.com/jistr/vim-nerdtree-tabs",
+        commit = "07d19f0299762669c6f93fbadb8249da6ba9de62",
+        priority = 60,
+    },
+    {
+        "https://github.com/tpope/vim-fugitive",
+        commit = "46eaf8918b347906789df296143117774e827616",
+    },
+    {
+        "https://github.com/mhinz/vim-signify",
+        commit = "7d538b77a5a8806e344b057f8846f6d0c035efa9",
+    },
+    {
+        "https://github.com/junegunn/fzf",
+        commit = "d21d5c9510170d74a7f959309da720b6df72ca01",
+    },
+    {
+        "https://github.com/junegunn/fzf.vim",
+        commit = "1e054c1d075d87903647db9320116d360eb8b024",
+    },
+    {
+        "https://github.com/neovim/nvim-lspconfig",
+        commit = "cf3dd4a290084a868fac0e2e876039321d57111c",
+    },
+    {
+        "https://github.com/rodjek/vim-puppet",
+        commit = "81943d532dee24f8518f855dfb17160809abfdfb",
+    },
+    {
+        "https://github.com/pangloss/vim-javascript",
+        commit = "c470ce1399a544fe587eab950f571c83cccfbbdc",
+    },
+    {
+        "https://github.com/Glench/Vim-Jinja2-Syntax",
+        commit = "2c17843b074b06a835f88587e1023ceff7e2c7d1",
+    },
+    {
+        "https://github.com/nfnty/vim-nftables",
+        commit = "26f8a506c6f3e41f1e4a8d6aa94c9a79a666bbff",
+    },
+}
+if os.getenv("COPILOT") == "1" then
+    deps[#deps + 1] = {
+        "https://github.com/github/copilot.vim.git",
+        commit = "25f73977033c597d530c7ab0e211d99b60927d2d",
     }
-)
+end
+require("lazy").setup(deps)
 
 require("catppuccin").setup({
     transparent_background = true,
