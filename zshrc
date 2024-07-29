@@ -30,3 +30,5 @@ export PATH=~/bin:~/.bin:/usr/sbin:/sbin/:/usr/local/sbin:$PATH
 
 export TERM=xterm-256color
 source ~/.shell-includes
+
+export AWS_SDK_LOAD_CONFIG=true
