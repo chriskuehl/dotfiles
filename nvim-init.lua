@@ -208,6 +208,10 @@ vim.fn.setreg(
     'm',
     [[idef main() -> int | None:passif __name__ == '__main__':raise SystemExit(main())]]
 )
+vim.fn.setreg(
+	'e',
+	[[oif err != nil {return ]]
+)
 
 -- LSP support; taken from https://github.com/neovim/nvim-lspconfig
 -- Setup language servers.
