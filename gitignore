@@ -15,3 +15,4 @@ Thumbs.db
 *.egg-info
 .eggs
 .idea
+__debug_bin*
