@@ -8,16 +8,16 @@ vim.opt.rtp:prepend(lazypath)
 local deps = {
     {
         "https://github.com/catppuccin/nvim",
-        commit = "988c0b2dde4140572ed37c6b8b5d5deac0219f9f",
+        commit = "c9e205fe035d622b3c2d66ee42edf368c0c31fd5",
         priority = 1000,
     },
     {
         "https://github.com/nvim-lualine/lualine.nvim",
-        commit = "2248ef254d0a1488a72041cfb45ca9caada6d994",
+        commit = "b431d228b7bbcdaea818bdc3e25b8cdbe861f056",
     },
     {
         "https://github.com/preservim/nerdtree",
-        commit = "9ec27d45a863aeb82fea56cebcb8a75a4e369fc9",
+        commit = "9b465acb2745beb988eff3c1e4aa75f349738230",
         priority = 50,
     },
     {
@@ -27,11 +27,11 @@ local deps = {
     },
     {
         "https://github.com/tpope/vim-fugitive",
-        commit = "46eaf8918b347906789df296143117774e827616",
+        commit = "d4877e54cef67f5af4f950935b1ade19ed6b7370",
     },
     {
         "https://github.com/mhinz/vim-signify",
-        commit = "7d538b77a5a8806e344b057f8846f6d0c035efa9",
+        commit = "8670143f9e12ed1cd3c9b2c54f345cdd9a4baac3",
     },
     {
         "https://github.com/junegunn/fzf",
@@ -39,15 +39,15 @@ local deps = {
     },
     {
         "https://github.com/junegunn/fzf.vim",
-        commit = "1e054c1d075d87903647db9320116d360eb8b024",
+        commit = "c5ce7908ee86af7d4090d2007086444afb6ec1c9",
     },
     {
         "https://github.com/neovim/nvim-lspconfig",
-        commit = "cf3dd4a290084a868fac0e2e876039321d57111c",
+        commit = "056f569f71e4b726323b799b9cfacc53653bceb3",
     },
     {
         "https://github.com/rodjek/vim-puppet",
-        commit = "81943d532dee24f8518f855dfb17160809abfdfb",
+        commit = "10bf0b27c5be81ee26c3a0d32e39b270f95329ce",
     },
     {
         "https://github.com/pangloss/vim-javascript",
@@ -65,7 +65,7 @@ local deps = {
 if os.getenv("COPILOT") == "1" then
     deps[#deps + 1] = {
         "https://github.com/github/copilot.vim.git",
-        commit = "25f73977033c597d530c7ab0e211d99b60927d2d",
+        commit = "782461159655b259cff10ecff05efa761e3d4764",
     }
 end
 require("lazy").setup(deps)
