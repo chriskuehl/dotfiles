@@ -290,7 +290,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 })
 
 local function use_tabs()
-    vim.opt.expandtab = false
+    vim.opt_local.expandtab = false
     vim.api.nvim_set_hl(0, 'HardTabs', {})
 end
 
@@ -299,7 +299,7 @@ vim.api.nvim_create_autocmd(
     {
         pattern = "go",
         callback = function()
-            vim.opt.textwidth = 99
+            vim.opt_local.textwidth = 99
             use_tabs()
         end,
     }
