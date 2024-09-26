@@ -221,7 +221,16 @@ vim.fn.setreg(
 -- LSP support; taken from https://github.com/neovim/nvim-lspconfig
 -- Setup language servers.
 local lspconfig = require('lspconfig')
-lspconfig.gopls.setup({})
+-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#gopls
+-- https://github.com/neovim/nvim-lspconfig/blob/master/lua/lspconfig/server_configurations/gopls.lua
+-- https://github.com/golang/tools/blob/master/gopls/doc/vim.md#neovim-config
+lspconfig.gopls.setup({
+    settings = {
+        gopls = {
+            staticcheck = true,
+        },
+    },
+})
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
@@ -242,7 +251,15 @@ vim.api.nvim_create_autocmd('LspAttach', {
             group = lsp_augroup,
             buffer = ev.buf,
             callback = function()
-                vim.lsp.buf.format()
+                local clients = vim.lsp.get_clients({
+                    bufnr = ev.buf,
+                    method = "textDocument/formatting",
+                })
+                if #clients > 0 then
+                    vim.lsp.buf.format({
+                        id = clients[1].id,
+                    })
+                end
             end,
         })
 
