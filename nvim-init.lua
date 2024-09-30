@@ -150,7 +150,7 @@ vim.keymap.set({'n', 'i'}, '<C-n>', '<ESC>:NERDTreeTabsToggle<CR>')
 -- fzf
 vim.keymap.set({'n', 'i'}, '<C-p>', '<ESC>:Files<CR>')
 vim.keymap.set({'n', 'i'}, '<C-s>', '<ESC>:Rg<CR>')
-vim.keymap.set({'n', 'i'}, '<C-b>', '<ESC>:Buffers<CR>')
+vim.keymap.set({'n'}, '<tab>', '<ESC>:Buffers<CR>')
 
 -- Highlight trailing whitespace
 local ID_MATCH_EXTRA_WHITESPACE = 1000
