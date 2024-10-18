@@ -43,7 +43,7 @@ local deps = {
     },
     {
         "https://github.com/neovim/nvim-lspconfig",
-        commit = "056f569f71e4b726323b799b9cfacc53653bceb3",
+        commit = "b55b9659de9ac17e05df4787bb023e4c7ef45329",
     },
     {
         "https://github.com/rodjek/vim-puppet",
@@ -233,6 +233,8 @@ lspconfig.gopls.setup({
     },
 })
 
+lspconfig.ruff.setup({})
+
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
@@ -252,6 +254,12 @@ vim.api.nvim_create_autocmd('LspAttach', {
             group = lsp_augroup,
             buffer = ev.buf,
             callback = function()
+                if vim.bo.filetype == 'python' then
+                     -- Python should never be auto-formatted.
+                     -- TODO: maybe some way to turn this on per-buffer or per-project for projects that use Ruff?
+                    return
+                end
+
                 local clients = vim.lsp.get_clients({
                     bufnr = ev.buf,
                     method = "textDocument/formatting",
