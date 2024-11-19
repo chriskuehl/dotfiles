@@ -76,3 +76,11 @@ showcolors() {
 sum() {
     awk '{s+=$1} END {print s}'
 }
+
+alias focal='docker run -v $(pwd):/mnt:rw -ti public.ecr.aws/docker/library/ubuntu:focal bash'
+alias jammy='docker run -v $(pwd):/mnt:rw -ti public.ecr.aws/docker/library/ubuntu:jammy bash'
+alias noble='docker run -v $(pwd):/mnt:rw -ti public.ecr.aws/docker/library/ubuntu:noble bash'
+alias buster='docker run -v $(pwd):/mnt:rw -ti public.ecr.aws/docker/library/debian:buster bash'
+alias bullseye='docker run -v $(pwd):/mnt:rw -ti public.ecr.aws/docker/library/debian:bullseye bash'
+alias bookworm='docker run -v $(pwd):/mnt:rw -ti public.ecr.aws/docker/library/debian:bookworm bash'
+alias trixie='docker run -v $(pwd):/mnt:rw -ti public.ecr.aws/docker/library/debian:trixie bash'
