@@ -1,0 +1,106 @@
+#!/usr/bin/env python3
+import argparse
+import dataclasses
+import subprocess
+import urllib.parse
+import typing
+from pathlib import Path
+
+
+class CodeHost(typing.Protocol):
+
+    def get_repo_url(self, repo_name: str) -> str:
+        ...
+
+    def get_file_url(self, repo_name: str, file_path: str, ref: str) -> str:
+        ...
+
+    def get_directory_url(self, repo_name: str, directory_path: str, ref: str) -> str:
+        ...
+
+
+@dataclasses.dataclass(frozen=True)
+class GitHub(CodeHost):
+    host: str
+
+    def get_repo_url(self, repo_name: str) -> str:
+        return f"https://{self.host}/{repo_name}"
+
+    def get_file_url(self, repo_name: str, file_path: str, ref: str) -> str:
+        return f"https://{self.host}/{repo_name}/blob/{ref}/{file_path}"
+
+    def get_directory_url(self, repo_name: str, directory_path: str, ref: str) -> str:
+        return f"https://{self.host}/{repo_name}/tree/{ref}/{directory_path}"
+
+
+def _find_git_root(path: Path) -> Path:
+    cur = path
+    while cur.parent != cur:
+        if (cur / ".git").is_dir():
+            return cur
+        cur = cur.parent
+    else:
+        raise ValueError(f"{path} is not part of a git repository")
+
+
+def _current_git_ref(root: Path) -> str:
+    return subprocess.check_output(
+        ("git", "rev-parse", "HEAD"),
+        cwd=root,
+    ).decode("utf8").rstrip("\n")
+
+
+def _find_git_remote(root: Path) -> str:
+    return subprocess.check_output(
+        ("git", "remote", "get-url", "origin"),
+    ).decode("utf8").rstrip("\n")
+
+
+def _parse_git_remote(remote: str) -> tuple[str, str]:
+    if '://' not in remote:
+        remote = "ssh://" + remote.replace(":", "/")
+
+    parsed = urllib.parse.urlparse(remote)
+    _, host = ("@" + parsed.netloc).rsplit("@", 1)
+    return host, parsed.path.lstrip("/")
+
+
+def _codehost_from_host(host: str) -> CodeHost:
+    # Eventually support other code hosts here...
+    return GitHub(host)
+
+
+def main() -> int | None:
+    parser = argparse.ArgumentParser()
+    # TODO: also support passing in a commit SHA
+    parser.add_argument("path", nargs="?", default="")
+    args = parser.parse_args()
+
+    path = Path(args.path).resolve()
+    git_root = _find_git_root(path)
+    relpath = str(path.relative_to(git_root))
+    ref = _current_git_ref(git_root)
+    host, repo_name = _parse_git_remote(_find_git_remote(git_root))
+    codehost = _codehost_from_host(host)
+
+    if path == git_root:
+        if args.path == "":
+            # Special case: "gitweb" with no arguments from the repo root should just
+            # print the repo URL, but "gitweb ." should print the current directory URL
+            # even from the repo root.
+            print(codehost.get_repo_url(repo_name))
+            return
+        else:
+            assert relpath == ".", relpath
+            relpath = ""
+
+    if path.is_file():
+        print(codehost.get_file_url(repo_name, str(relpath), ref))
+    elif path.is_dir():
+        print(codehost.get_directory_url(repo_name, str(relpath), ref))
+    else:
+        raise ValueError(f"{path} is neither a file nor a directory")
+
+
+if __name__ == '__main__':
+    raise SystemExit(main())
