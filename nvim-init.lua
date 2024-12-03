@@ -70,6 +70,9 @@ if os.getenv("COPILOT") == "1" then
 end
 require("lazy").setup(deps)
 
+vim.keymap.set("n", "<Space>", "<Nop>", { silent = true, remap = false })
+vim.g.mapleader = " "
+
 require("catppuccin").setup({
     transparent_background = true,
     styles = {
@@ -284,10 +287,22 @@ lspconfig.gopls.setup({
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
-vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
+vim.keymap.set('n', '<Leader>e', vim.diagnostic.open_float)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
-vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist)
+vim.keymap.set('n', '<Leader>q', vim.diagnostic.setloclist)
+
+local function toggle_wrap()
+    if vim.opt.linebreak:get() == false then
+        vim.opt.linebreak = true
+        print("Line wrap enabled")
+    else
+        vim.opt.linebreak = false
+        print("Line wrap disabled")
+    end
+end
+
+vim.keymap.set('n', '<Leader>l', toggle_wrap)
 
 -- Use LspAttach autocommand to only map the following keys
 -- after the language server attaches to the current buffer
