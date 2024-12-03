@@ -80,10 +80,15 @@ require("catppuccin").setup({
 
 vim.cmd.colorscheme("catppuccin-frappe")
 
+local lualine_theme = require("lualine.themes.catppuccin")
+lualine_theme.normal.c.bg = "#323545"
+for k, v in pairs(lualine_theme.inactive) do
+    v["bg"] = lualine_theme.normal.c.bg
+end
 
 require("lualine").setup({
     options = {
-        theme = "catppuccin",
+        theme = lualine_theme,
         icons_enabled = false,
         component_separators = { left = '<', right = '>'},
         section_separators = { left = '<', right = '>'},
@@ -153,7 +158,6 @@ vim.opt.expandtab = true
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
-vim.opt.fillchars = {stlnc = '═'}
 
 -- Faster updatetime for async vim-signify.
 vim.opt.updatetime = 100
