@@ -177,9 +177,9 @@ vim.opt.confirm = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
--- Tab movement.
-vim.keymap.set('n', '<C-H>', 'gT')
-vim.keymap.set('n', '<C-L>', 'gt')
+-- Buffer movement.
+vim.keymap.set('n', '<C-H>', ':bp<CR>')
+vim.keymap.set('n', '<C-L>', ':bn<CR>')
 
 -- Ctrl-C to disable highlighting.
 vim.keymap.set('n', '<C-C>', ':nohl<CR><silent><C-C>')
