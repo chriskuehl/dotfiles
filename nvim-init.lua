@@ -61,6 +61,11 @@ local deps = {
         "https://github.com/nfnty/vim-nftables",
         commit = "26f8a506c6f3e41f1e4a8d6aa94c9a79a666bbff",
     },
+    {
+        "pmizio/typescript-tools.nvim",
+        commit = "35e397ce467bedbbbb5bfcd0aa79727b59a08d4a",
+        dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+    },
 }
 if os.getenv("COPILOT") == "1" then
     deps[#deps + 1] = {
@@ -283,7 +288,16 @@ lspconfig.gopls.setup({
     },
 })
 
+-- TODO: figure out if there is a way to use the Ruff LSP which isn't really annoying
 -- lspconfig.ruff.setup({})
+
+require("typescript-tools").setup({
+    settings = {
+        jsx_close_tag = {
+            enable = false,
+        },
+    },
+})
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
@@ -322,14 +336,18 @@ vim.api.nvim_create_autocmd('LspAttach', {
                     return
                 end
 
-                local clients = vim.lsp.get_clients({
-                    bufnr = ev.buf,
-                    method = "textDocument/formatting",
-                })
-                if #clients > 0 then
-                    vim.lsp.buf.format({
-                        id = clients[1].id,
+                -- vim.lsp can have { get_clients = nil } when only typescript
+                -- is active for some reason.
+                if vim.lsp.get_clients then
+                    local clients = vim.lsp.get_clients({
+                        bufnr = ev.buf,
+                        method = "textDocument/formatting",
                     })
+                    if #clients > 0 then
+                        vim.lsp.buf.format({
+                            id = clients[1].id,
+                        })
+                    end
                 end
             end,
         })
