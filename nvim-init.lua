@@ -66,6 +66,14 @@ local deps = {
         commit = "35e397ce467bedbbbb5bfcd0aa79727b59a08d4a",
         dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
     },
+    {
+        "varnishcache-friends/vim-varnish",
+        commit = "01458458f20831d43045423344bcb70a40d04b0f",
+    },
+    {
+        "hashivim/vim-terraform",
+        commit = "174789e2f0a1c8348ae129223581760807162e82",
+    },
 }
 if os.getenv("COPILOT") == "1" then
     deps[#deps + 1] = {
