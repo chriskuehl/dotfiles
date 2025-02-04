@@ -409,3 +409,16 @@ vim.filetype.add({
     tilt = 'python',
   }
 })
+
+vim.g.diagnostics_active = true
+function _G.toggle_diagnostics()
+  if vim.diagnostic.is_enabled() then
+    vim.diagnostic.disable()
+    print("Diagnostics disabled")
+  else
+    vim.diagnostic.enable()
+    print("Diagnostics enabled")
+  end
+end
+
+vim.api.nvim_set_keymap('n', '<leader>w', ':call v:lua.toggle_diagnostics()<CR>',  {noremap = true, silent = true})
