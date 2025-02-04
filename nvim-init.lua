@@ -278,6 +278,10 @@ vim.fn.setreg(
     [[idef main() -> int | None:passif __name__ == '__main__':raise SystemExit(main())]]
 )
 vim.fn.setreg(
+    'n',
+    [[i#!/usr/bin/env -S uv run --script# /// script# requires-python = ">=3.13"# dependencies = []# ///def main() -> int | None:passif __name__ == '__main__':raise SystemExit(main())]]
+)
+vim.fn.setreg(
 	'e',
 	[[oif err != nil {return ]]
 )
