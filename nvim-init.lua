@@ -78,7 +78,7 @@ local deps = {
 if os.getenv("COPILOT") == "1" then
     deps[#deps + 1] = {
         "https://github.com/github/copilot.vim.git",
-        commit = "782461159655b259cff10ecff05efa761e3d4764",
+        commit = "cd7f01009fb7b30e22840cadc4faad88b05c6eef",
     }
 end
 require("lazy").setup(deps)
