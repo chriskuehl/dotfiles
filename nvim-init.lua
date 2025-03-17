@@ -74,6 +74,10 @@ local deps = {
         "hashivim/vim-terraform",
         commit = "174789e2f0a1c8348ae129223581760807162e82",
     },
+    {
+        "https://github.com/famiu/bufdelete.nvim.git",
+        commit = "f6bcea78afb3060b198125256f897040538bcb8",
+    },
 }
 if os.getenv("COPILOT") == "1" then
     deps[#deps + 1] = {
