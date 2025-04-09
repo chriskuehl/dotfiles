@@ -45,6 +45,9 @@ echo_cmd mkdir -p ~/.config/nvim
 echo_cmd rm -f ~/.config/nvim/init.vim
 echo_cmd ln -fs "$(readlink -f nvim-init.lua)" ~/.config/nvim/init.lua
 
+echo_cmd mkdir -p ~/.config/kitty
+echo_cmd ln -fs "$(readlink -f kitty.conf)" ~/.config/kitty/kitty.conf
+
 for histfile in \
     lesshst \
     grails_history \
