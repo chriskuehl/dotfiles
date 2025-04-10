@@ -12,12 +12,6 @@ case $OSTYPE in
 	;;
 esac
 
-case $TERM in
-	xterm-256color | xterm-color)
-		color_prompt=yes
-	;;
-esac
-
 unset SHELL_GNOME
 if which gconftool-2 > /dev/null; then
 	export SHELL_GNOME="yes"
