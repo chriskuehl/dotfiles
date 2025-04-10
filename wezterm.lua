@@ -22,24 +22,24 @@ config.colors = {
     foreground = 'white',
     background = '#2aaa2aaa2aaa',
     ansi = {
-        'rgb(0,0,0)',
-        'rgb(239,41,41)',
-        'rgb(124,207,44)',
-        'rgb(222,190,50)',
-        'rgb(100,147,197)',
-        'rgb(166,114,160)',
-        'rgb(52,226,226)',
-        'rgb(85,87,83)',
+        'rgb(0,0,0)', -- black
+        'rgb(239,41,41)', -- red
+        'rgb(124,207,44)', -- green
+        'rgb(222,190,50)', -- yellow
+        'rgb(100,147,197)', -- blue
+        'rgb(166,114,160)', -- magenta
+        'rgb(52,226,226)', -- cyan
+        'rgb(85,87,83)', -- white
     },
     brights = {
-        'rgb(85,85,85)',
-        'rgb(255,85,85)',
-        'rgb(138,226,52)',
-        'rgb(236,203,56)',
-        'rgb(114,159,207)',
-        'rgb(173,127,168)',
-        'rgb(85,255,255)',
-        'rgb(211,215,207)'
+        'rgb(85,85,85)', -- bright black
+        'rgb(255,85,85)', -- bright red
+        'rgb(174 239 106)', -- bright green
+        'rgb(236,203,56)', -- bright yellow
+        'rgb(114,159,207)', -- bright blue
+        'rgb(173,127,168)', -- bright magenta
+        'rgb(85,255,255)', -- bright cyan
+        'rgb(211,215,207)' -- bright white
     },
 }
 config.mouse_bindings = {

@@ -78,6 +78,10 @@ local deps = {
         "https://github.com/famiu/bufdelete.nvim.git",
         commit = "f6bcea78afb3060b198125256f897040538bcb8",
     },
+    {
+        "https://github.com/preservim/vim-markdown",
+        commit = "8f6cb3a6ca4e3b6bcda0730145a0b700f3481b51",
+    },
 }
 if os.getenv("COPILOT") == "1" then
     deps[#deps + 1] = {
@@ -179,6 +183,7 @@ vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.g.editorconfig = false
+vim.opt.foldenable = false
 
 -- Faster updatetime for async vim-signify.
 vim.opt.updatetime = 100
@@ -287,8 +292,8 @@ vim.fn.setreg(
     [[i#!/usr/bin/env -S uv run --script# /// script# requires-python = ">=3.13"# dependencies = []# ///def main() -> int | None:passif __name__ == '__main__':raise SystemExit(main())]]
 )
 vim.fn.setreg(
-	'e',
-	[[oif err != nil {return ]]
+    'e',
+    [[oif err != nil {return ]]
 )
 
 -- LSP support; taken from https://github.com/neovim/nvim-lspconfig
