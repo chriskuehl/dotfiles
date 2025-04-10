@@ -1,5 +1,9 @@
 local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
+config.check_for_updates = false
+config.window_frame = {
+    font_size = 22,
+}
 config.bold_brightens_ansi_colors = true
 config.font = wezterm.font(
     'Noto Sans Mono',
@@ -30,4 +34,3 @@ config.colors = {
     },
 }
 return config
-
