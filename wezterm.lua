@@ -42,4 +42,21 @@ config.colors = {
         'rgb(211,215,207)'
     },
 }
+config.mouse_bindings = {
+    -- Change the default click behavior so that it only selects
+    -- text and doesn't open hyperlinks
+    {
+        event = { Up = { streak = 1, button = 'Left' } },
+        mods = 'NONE',
+        action = wezterm.action.CompleteSelection 'ClipboardAndPrimarySelection',
+    },
+
+    -- and make CTRL-Click open hyperlinks
+    {
+        event = { Up = { streak = 1, button = 'Left' } },
+        mods = 'CTRL',
+        action = wezterm.action.OpenLinkAtMouseCursor,
+    },
+}
+config.audible_bell = "Disabled"
 return config
