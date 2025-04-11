@@ -7,6 +7,7 @@ if wezterm.hostname() == 'overlook' then
     default_font_size = 22
 end
 
+config.font_size = default_font_size
 config.window_frame = {
     font_size = default_font_size,
 }
