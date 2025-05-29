@@ -417,22 +417,32 @@ vim.api.nvim_create_autocmd(
 )
 
 vim.filetype.add({
-  extension = {
-     -- Starlark, but close enough.
-    star = 'python',
-    tilt = 'python',
-  }
+    extension = {
+        -- Starlark, but close enough.
+        star = 'python',
+        tilt = 'python',
+    },
+    pattern = {
+        ['.*'] = {
+            function(path, bufnr)
+                local content = vim.api.nvim_buf_get_lines(bufnr, 0, 1, false)[1] or ''
+                if vim.regex([[^#!.*\suv\s.*run]]):match_str(content) ~= nil then
+                    return "python"
+                end
+            end,
+        }
+    },
 })
 
 vim.g.diagnostics_active = true
 function _G.toggle_diagnostics()
-  if vim.diagnostic.is_enabled() then
-    vim.diagnostic.disable()
-    print("Diagnostics disabled")
-  else
-    vim.diagnostic.enable()
-    print("Diagnostics enabled")
-  end
+    if vim.diagnostic.is_enabled() then
+        vim.diagnostic.disable()
+        print("Diagnostics disabled")
+    else
+        vim.diagnostic.enable()
+        print("Diagnostics enabled")
+    end
 end
 
 vim.api.nvim_set_keymap('n', '<leader>w', ':call v:lua.toggle_diagnostics()<CR>',  {noremap = true, silent = true})
