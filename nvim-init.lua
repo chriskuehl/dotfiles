@@ -340,6 +340,18 @@ end
 
 vim.keymap.set('n', '<Leader>l', toggle_wrap)
 
+local function toggle_copilot()
+    -- vim.g.copilot_enabled is initially nil for some reason, so check `0` for disabled.
+    if vim.g.copilot_enabled ~= 0 then
+        vim.cmd.Copilot("disable")
+        print("Copilot disabled for current buffer")
+    else
+        vim.cmd.Copilot("enable")
+        print("Copilot enabled for current buffer")
+    end
+end
+vim.keymap.set('n', '<Leader>p', toggle_copilot)
+
 -- Use LspAttach autocommand to only map the following keys
 -- after the language server attaches to the current buffer
 local lsp_augroup = vim.api.nvim_create_augroup('UserLspConfig', {})
