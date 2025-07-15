@@ -173,6 +173,8 @@ require("lualine").setup({
 -- Disable mouse.
 vim.opt.mouse = ""
 
+vim.opt.clipboard:append("unnamedplus")
+
 -- Don't warn about files already open.
 vim.opt.shortmess:append("A")
 
