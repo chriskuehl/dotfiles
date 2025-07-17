@@ -1,5 +1,0 @@
-#!/bin/bash -eux
-for f in "$@"; do
-	echo "$f"
-	time ffmpeg -i "$f" -f matroska -vcodec h264 -acodec aac "$f.mp4"
-done
