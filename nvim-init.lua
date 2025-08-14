@@ -8,12 +8,12 @@ vim.opt.rtp:prepend(lazypath)
 local deps = {
     {
         "https://github.com/catppuccin/nvim",
-        commit = "c9e205fe035d622b3c2d66ee42edf368c0c31fd5",
+        commit = "3aaf3ab60221bca8edb1354e41bd514a22c89de2",
         priority = 1000,
     },
     {
         "https://github.com/nvim-lualine/lualine.nvim",
-        commit = "b431d228b7bbcdaea818bdc3e25b8cdbe861f056",
+        commit = "b8c23159c0161f4b89196f74ee3a6d02cdc3a955",
     },
     {
         "https://github.com/preservim/nerdtree",
@@ -21,29 +21,24 @@ local deps = {
         priority = 50,
     },
     {
-        "https://github.com/jistr/vim-nerdtree-tabs",
-        commit = "07d19f0299762669c6f93fbadb8249da6ba9de62",
-        priority = 60,
-    },
-    {
         "https://github.com/tpope/vim-fugitive",
-        commit = "d4877e54cef67f5af4f950935b1ade19ed6b7370",
+        commit = "61b51c09b7c9ce04e821f6cf76ea4f6f903e3cf4",
     },
     {
         "https://github.com/mhinz/vim-signify",
-        commit = "8670143f9e12ed1cd3c9b2c54f345cdd9a4baac3",
+        commit = "54346382be614ef5934cbbe204fd58ba3247a84d",
     },
     {
         "https://github.com/junegunn/fzf",
-        commit = "d21d5c9510170d74a7f959309da720b6df72ca01",
+        commit = "978b6254c71a8b71d0ad0e58bee74c70a53c1345",
     },
     {
         "https://github.com/junegunn/fzf.vim",
-        commit = "c5ce7908ee86af7d4090d2007086444afb6ec1c9",
+        commit = "3725f364ccd25b85a91970720ba9bc2931861910",
     },
     {
         "https://github.com/neovim/nvim-lspconfig",
-        commit = "b55b9659de9ac17e05df4787bb023e4c7ef45329",
+        commit = "45ff1914044de7dbd4cd85053dc09f47312a2f4d",
     },
     {
         "https://github.com/rodjek/vim-puppet",
@@ -51,7 +46,7 @@ local deps = {
     },
     {
         "https://github.com/pangloss/vim-javascript",
-        commit = "c470ce1399a544fe587eab950f571c83cccfbbdc",
+        commit = "b26c9edb3563e02f5c0b20580f7cf9743e95b157",
     },
     {
         "https://github.com/Glench/Vim-Jinja2-Syntax",
@@ -62,17 +57,17 @@ local deps = {
         commit = "26f8a506c6f3e41f1e4a8d6aa94c9a79a666bbff",
     },
     {
-        "pmizio/typescript-tools.nvim",
-        commit = "35e397ce467bedbbbb5bfcd0aa79727b59a08d4a",
+        "https://github.com/pmizio/typescript-tools.nvim",
+        commit = "3c501d7c7f79457932a8750a2a1476a004c5c1a9",
         dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
     },
     {
-        "varnishcache-friends/vim-varnish",
+        "https://github.com/varnishcache-friends/vim-varnish",
         commit = "01458458f20831d43045423344bcb70a40d04b0f",
     },
     {
-        "hashivim/vim-terraform",
-        commit = "174789e2f0a1c8348ae129223581760807162e82",
+        "https://github.com/hashivim/vim-terraform",
+        commit = "520498fab16a3a11f2ae1b8cb65e0a1684bc317a",
     },
     {
         "https://github.com/famiu/bufdelete.nvim.git",
