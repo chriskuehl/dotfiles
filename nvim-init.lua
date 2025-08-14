@@ -213,7 +213,7 @@ vim.keymap.set('n', 'j', 'gj')
 vim.keymap.set('n', 'k', 'gk')
 
 -- NERDTree
-vim.keymap.set({'n', 'i'}, '<C-n>', '<ESC>:NERDTreeTabsToggle<CR>')
+vim.keymap.set({'n', 'i'}, '<C-n>', '<ESC>:NERDTreeToggle<CR>')
 
 -- fzf
 vim.keymap.set({'n', 'i'}, '<C-p>', '<ESC>:Files<CR>')
