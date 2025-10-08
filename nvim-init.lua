@@ -179,6 +179,8 @@ vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.g.editorconfig = false
 vim.opt.foldenable = false
+-- Fix Ctrl-C in sql files.
+vim.g.omni_sql_no_default_maps = 1
 
 -- Faster updatetime for async vim-signify.
 vim.opt.updatetime = 100
