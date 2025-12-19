@@ -84,3 +84,4 @@ alias buster='docker run -v $(pwd):/mnt:rw -ti public.ecr.aws/docker/library/deb
 alias bullseye='docker run -v $(pwd):/mnt:rw -ti public.ecr.aws/docker/library/debian:bullseye bash'
 alias bookworm='docker run -v $(pwd):/mnt:rw -ti public.ecr.aws/docker/library/debian:bookworm bash'
 alias trixie='docker run -v $(pwd):/mnt:rw -ti public.ecr.aws/docker/library/debian:trixie bash'
+alias trixie-amd64='docker run --platform linux/amd64 -v $(pwd):/mnt:rw -ti public.ecr.aws/docker/library/debian:trixie bash'
